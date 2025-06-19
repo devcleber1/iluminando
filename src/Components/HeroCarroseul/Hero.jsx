@@ -9,7 +9,7 @@ import Banner4 from '../../assets/natal.webp';
 
 const navigation = [
   { name: 'Home', href: '#' },
-  { name: 'Sobre', href: '#' },
+  { name: 'Quem Somos', href: '#' },
   { name: 'Galeria', href: '#' },
   { name: 'Oficinas', href: '#' },
   { name: 'Projetos', href: '#' },
