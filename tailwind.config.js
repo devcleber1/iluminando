@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: {
         title: ['Fredoka', 'sans-serif'],
-        body: ['Poppins', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
         menu: ['Montserrat', 'sans-serif'],
       },
     },
