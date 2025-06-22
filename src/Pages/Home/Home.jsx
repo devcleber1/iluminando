@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       <HeroCarousel />
-      <Partners />
-      <About />    
+      <About />  
+      <Partners />  
       <Projects/> 
       <Workshop/>
       <Blog/>

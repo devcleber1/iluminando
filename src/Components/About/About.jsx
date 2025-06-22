@@ -14,16 +14,37 @@ const ArrowIcon = () => (
 
 const About = () => {
   return (
-    <section id="sobre" className="max-w-7xl mx-auto my-8 px-4 text-center font-body">
-      <div className="mt-8 mb-16 bg-yellow-400 rounded-md p-4 text-white">
-        <h2 className="text-[clamp(1.25rem,2.5vw,1.75rem)] font-semibold">Horário de Atendimento</h2>
-        <p className="text-[clamp(1rem,2vw,1.25rem)] mt-2">
-          De segunda a sexta-feira, das <strong>08h às 21h</strong>. Estamos disponíveis para atividades, apoio e desenvolvimento de novos projetos.
-        </p>
+    <section id="sobre" className="w-full my-0.5 px-0 text-center font-body">
+      {/* CTA sempre lado a lado */}
+      <div className="flex w-full">
+        <a
+          href="/quem-somos"
+          className="bg-[#ffce26] text-white flex-1 min-w-0 min-h-[300px] p-6 flex flex-col items-center justify-center 
+          hover:brightness-95 hover:scale-[1.03] active:scale-95 transition-transform duration-300 font-title"
+        >
+          <h2 className="text-[clamp(1.25rem,2.5vw,1.75rem)] font-bold">Quem somos</h2>
+          <p className="text-[clamp(1rem,2vw,1.25rem)] mt-1 font-body">Missão, Visão & Valores</p>
+        </a>
+        <a
+          href="/blog"
+          className="bg-[#000] text-white flex-1 min-w-0 min-h-[300px] p-6 flex flex-col items-center justify-center 
+          hover:brightness-90 hover:scale-[1.03] active:scale-95 transition-transform duration-300 font-title"
+        >
+          <h2 className="text-[clamp(1.25rem,2.5vw,1.75rem)] font-bold">Nosso blog</h2>
+          <p className="text-[clamp(1rem,2vw,1.25rem)] mt-1 font-body">Confira nossos textos e artigos</p>
+        </a>
+        <a
+          href="/apoie"
+          className="bg-[#ffce26] text-white flex-1 min-w-0 min-h-[300px] p-6 flex flex-col items-center justify-center 
+          hover:brightness-95 hover:scale-[1.03] active:scale-95 transition-transform duration-300 font-title"
+        >
+          <h2 className="text-[clamp(1.25rem,2.5vw,1.75rem)] font-bold">Seja um apoiador</h2>
+          <p className="text-[clamp(1rem,2vw,1.25rem)] mt-1 font-body">Doe & faça a diferença</p>
+        </a>
       </div>
 
-      <h1 className="text-[clamp(2rem,2.5vw,4rem)] mb-8 font-title font-bold text-center">
-        Quem Somos
+      <h1 className="text-[clamp(2rem,2.5vw,4rem)] my-8 font-title font-bold text-yellow-500 text-center">
+        Sobre
       </h1>
 
       <div className="flex flex-col items-center gap-10 max-w-5xl mx-auto px-2 md:px-4">
@@ -42,7 +63,7 @@ const About = () => {
             />
           </div>
 
-          <div className="w-full md:w-1/2 text-left md:text-left flex flex-col items-center">
+          <div className="w-full md:w-1/2 text-left flex flex-col items-center">
             <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-title font-semibold mb-5">
               Iluminando o Futuro: Transformando Vidas
             </h2>

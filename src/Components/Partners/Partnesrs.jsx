@@ -31,7 +31,7 @@ const animatedVariant = {
 
 export default function PartnersSection() {
   return (
-    <section className="bg-gray-50 py-12 px-4">
+    <section className="bg-gray-50 py-12 px-4 my-8">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 items-center justify-center">
           {partners.map((partner, idx) => (
