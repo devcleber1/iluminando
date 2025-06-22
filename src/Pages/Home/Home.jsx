@@ -5,6 +5,7 @@ import Partners from '../../Components/Partners/Partnesrs';
 import Blog from '../../Components/Blog/Blog';
 import Projects from '../../Components/Projects/Projects';
 import CTA from '../../Components/CTA/Cta';
+import Footer from '../../Components/Footer/Footer';
 export default function Home() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function Home() {
       <Workshop/>
       <Blog/>
       <CTA/>  
+      <Footer/>
     </>
   );
 }
