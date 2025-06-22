@@ -69,12 +69,39 @@ export default function ProjectSection() {
                   {descricao}
                 </p>
                 <motion.a
-                  href="#apoie"
-                  whileHover={{ scale: 1.05 }}
-                  className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-white px-8 py-3 rounded-full font-menu font-semibold shadow-md transition-all duration-300"
-                >
-                  APOIE
-                </motion.a>
+  href="#apoie"
+  whileHover={{ scale: 1.05 }}
+  className="
+    flex
+    justify-center
+    items-center
+    max-w-xs
+    w-full
+    px-6
+    py-4
+    text-[16px]
+    font-semibold
+    text-white
+    rounded-lg
+    bg-gradient-to-r
+    from-yellow-400
+    to-yellow-500
+    shadow-lg
+    hover:from-yellow-500
+    hover:to-yellow-600
+    hover:scale-105
+    active:scale-95
+    transition
+    duration-300
+    ease-in-out
+    cursor-pointer
+    select-none
+    mx-auto md:mx-0
+  "
+>
+  APOIE
+</motion.a>
+
               </div>
             </motion.div>
           ))}

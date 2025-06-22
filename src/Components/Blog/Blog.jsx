@@ -48,24 +48,15 @@ const arrowVariants = {
   hover: { x: 6, transition: { duration: 0.3, ease: 'easeInOut' } },
 };
 
-const buttonVariants = {
-  initial: { scale: 1 },
-  hover: {
-    scale: 1.05,
-    backgroundColor: '#fde047', // yellow-300
-    transition: { duration: 0.3, yoyo: Infinity },
-  },
-};
-
 export default function BlogSection() {
   return (
-    <section className="bg-yellow-400 py-12 px-6 font-body">
+    <section className="bg-white py-12 px-6 font-body">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <h2 className="text-5xl font-title font-semibold text-white">
+          <h2 className="text-5xl font-title font-semibold text-yellow-500">
             Nosso Blog
           </h2>
-          <p className="mt-4 text-white text-[18px] max-w-lg mx-auto">
+          <p className="mt-4 text-gray-600 text-[18px] max-w-lg mx-auto">
             Fique por dentro das últimas novidades, dicas e insights que preparamos especialmente para você. Descubra conteúdos que vão inspirar e ajudar no seu dia a dia.
           </p>
         </div>
@@ -74,9 +65,13 @@ export default function BlogSection() {
           {blogPosts.map(({ id, title, description, image, authorName, authorRole, authorImage, link }) => (
             <motion.article
               key={id}
-              whileHover={{ scale: 1.05, y: -10, boxShadow: '0 15px 30px rgba(0,0,0,0.2)' }}
-              transition={{ type: 'spring', stiffness: 300 }}
-              className="group rounded-lg overflow-hidden shadow-lg bg-white cursor-pointer"
+              whileHover={{
+                scale: 1.03,
+                y: -8,
+                boxShadow: '0 15px 30px rgba(0,0,0,0.1)',
+              }}
+              transition={{ type: 'spring', stiffness: 250 }}
+              className="group rounded-lg overflow-hidden shadow-md bg-white cursor-pointer"
             >
               <div className="relative">
                 <img
@@ -103,7 +98,7 @@ export default function BlogSection() {
                 <p className="text-sm font-body text-gray-700">{description}</p>
                 <motion.a
                   href={link}
-                  className="inline-flex items-center mt-4 text-yellow-400 underline font-semibold hover:text-yellow-700"
+                  className="inline-flex items-center mt-4 text-yellow-500 font-semibold underline hover:text-yellow-700"
                   initial="initial"
                   whileHover="hover"
                 >
@@ -124,17 +119,40 @@ export default function BlogSection() {
           ))}
         </div>
 
+        {/* CTA Button */}
         <div className="text-center mt-12">
-          <motion.a
-            href="/blog"
-            className="inline-block px-8 py-3 rounded bg-white text-yellow-500 font-menu font-semibold text-base md:text-lg hover:bg-yellow-100 transition"
-            initial="initial"
-            whileHover="hover"
-            variants={buttonVariants}
-          >
-            Leia Mais
-          </motion.a>
-        </div>
+  <motion.a
+    href="/blog"
+    className="
+    inline-block
+    max-w-xs
+    w-full
+    px-5
+    py-5
+    text-[16px]
+    font-semibold
+    text-white
+    rounded-lg
+    bg-gradient-to-r
+    from-yellow-400
+    to-yellow-500
+    shadow-lg
+    hover:from-yellow-500
+    hover:to-yellow-600
+    hover:scale-105
+    active:scale-95
+    transition
+    duration-300
+    ease-in-out
+    cursor-pointer
+    select-none
+    mx-auto
+  "
+    whileHover={{ scale: 1.05 }}
+  >
+    Leia mais
+  </motion.a>
+</div>
       </div>
     </section>
   );
