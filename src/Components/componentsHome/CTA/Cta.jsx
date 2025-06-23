@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import crianca from '../../assets/educa.jpg'; // Caminho real da imagem
+import crianca from '../../../assets/educa.jpg'; // Caminho real da imagem
 
 export default function HeroSejaDiferenca() {
   return (

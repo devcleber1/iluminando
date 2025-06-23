@@ -1,6 +1,6 @@
-import Educação from '../../assets/educacao.jpg';
-import Capoeira from '../../assets/capoeira.jpg';
-import Futebol from '../../assets/futebol.jpg';
+import Educação from '../../../assets/educacao.jpg';
+import Capoeira from '../../../assets/capoeira.jpg';
+import Futebol from '../../../assets/futebol.jpg';
 
 const workshops = [
   {

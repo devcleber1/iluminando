@@ -1,6 +1,6 @@
 import React from 'react';
 import { Instagram, Youtube } from 'lucide-react';
-import Iluminando from '../../assets/iluminando.png';
+import Iluminando from '../../../assets/iluminando.png';
 
 export default function Footer() {
   return (

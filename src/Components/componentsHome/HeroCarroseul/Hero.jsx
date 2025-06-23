@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
-import Ilumina from '../../assets/iluminando.png';
-import Banner1 from '../../assets/ilumina.webp';
-import Banner3 from '../../assets/flamengo.webp';
-import Banner4 from '../../assets/natal.webp';
+import Ilumina from '../../../assets/iluminando.png';
+import Banner1 from '../../../assets/ilumina.webp';
+import Banner3 from '../../../assets/flamengo.webp';
+import Banner4 from '../../../assets/natal.webp';
 
 const navigation = [
   { name: 'Home', href: '#' },

@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import Flamengo from '../../assets/flamengo.png';
-import Cufa from '../../assets/cufa.png';
-import Aguas from '../../assets/aguasdorio.png';
-import Uni from '../../assets/unissuam.png';
+import Flamengo from '../../../assets/flamengo.png';
+import Cufa from '../../../assets/cufa.png';
+import Aguas from '../../../assets/aguasdorio.png';
+import Uni from '../../../assets/unissuam.png';
 
 const partners = [
   { src: Flamengo, alt: 'Flamengo' },

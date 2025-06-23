@@ -1,11 +1,11 @@
-import HeroCarousel from '../../Components/HeroCarroseul/Hero';
-import About from '../../Components/About/About';
-import Workshop from  '../../Components/WorkShops/Workshop'
-import Partners from '../../Components/Partners/Partnesrs';
-import Blog from '../../Components/Blog/Blog';
-import Projects from '../../Components/Projects/Projects';
-import CTA from '../../Components/CTA/Cta';
-import Footer from '../../Components/Footer/Footer';
+import HeroCarousel from '../../Components/componentsHome/HeroCarroseul/Hero';
+import About from '../../Components/componentsHome/About/About';
+import Workshop from  '../../Components/componentsHome/WorkShops/Workshop'
+import Partners from '../../Components/componentsHome/Partners/Partners';
+import Blog from '../../Components/componentsHome/Blog/Blog';
+import Projects from '../../Components/componentsHome/Projects/Projects';
+import CTA from '../../Components/componentsHome/CTA/Cta';
+import Footer from '../../Components/componentsHome/Footer/Footer';
 export default function Home() {
   return (
     <>

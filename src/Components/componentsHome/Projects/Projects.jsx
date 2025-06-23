@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import projeto1 from '../../assets/bale.jpg';
-import projeto2 from '../../assets/natalsol.jpg';
-import projeto3 from '../../assets/quadrilha.jpg';
+import projeto1 from '../../../assets/bale.jpg';
+import projeto2 from '../../../assets/natalsol.jpg';
+import projeto3 from '../../../assets/quadrilha.jpg';
 
 const projects = [
   {
