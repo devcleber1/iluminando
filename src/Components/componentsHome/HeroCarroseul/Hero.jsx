@@ -10,11 +10,13 @@ import Banner4 from '../../../assets/natal.webp';
 const navigation = [
   { name: 'Home', href: '#' },
   { name: 'Quem Somos', href: '#' },
-  { name: 'Galeria', href: '#' },
+  { name: 'Transparência', href: '#' },
   { name: 'Oficinas', href: '#' },
   { name: 'Projetos', href: '#' },
   { name: 'Blog', href: '#' },
-];
+  { name: 'Galeria', href: '#' },
+  { name: 'Contato', href: '#' },
+]
 
 const carouselImages = [
   { src: Banner1, alt: 'Imagem ilustrativa de iluminação' },
