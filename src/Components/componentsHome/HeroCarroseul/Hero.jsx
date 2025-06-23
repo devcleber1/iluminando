@@ -83,20 +83,28 @@ export default function Example() {
           </div>
 
           {/* Navegação desktop */}
-          <div className="hidden lg:flex lg:flex-1 lg:justify-center lg:gap-x-12">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-center lg:gap-x-8">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 style={navLinkTextShadow}
-                className="font-menu text-base font-bold text-gray-200 hover:text-yellow-400 transition-colors duration-200"
+                className="font-menu text-base font-bold text-gray-200 hover:text-yellow-400 transition-colors duration-200 whitespace-nowrap"
               >
                 {item.name}
               </a>
             ))}
           </div>
 
-          <div className="hidden lg:flex lg:flex-1" />
+          {/* Botão Doar */}
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a
+              href="#"
+              className="font-menu rounded-md bg-transparent border border-yellow-400 px-3.5 py-2.5 text-sm font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-white transition-colors duration-200"
+            >
+              Quero Doar
+            </a>
+          </div>
 
           {/* Botão menu mobile */}
           <div className="flex lg:hidden">
@@ -141,6 +149,12 @@ export default function Example() {
                       {item.name}
                     </a>
                   ))}
+                  <a
+                    href="#"
+                    className="font-menu -mx-3 block rounded-md bg-yellow-400 px-3.5 py-2 text-lg font-semibold text-white hover:bg-yellow-500 transition-colors duration-200 focus:outline-none mt-4 text-center"
+                  >
+                    Quero Doar
+                  </a>
                 </div>
               </div>
             </div>
