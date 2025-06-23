@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 
 const blogPosts = [
   {
@@ -42,11 +43,6 @@ const blogPosts = [
     link: '#',
   },
 ];
-
-const arrowVariants = {
-  initial: { x: 0 },
-  hover: { x: 6, transition: { duration: 0.3, ease: 'easeInOut' } },
-};
 
 export default function BlogSection() {
   return (
@@ -96,63 +92,55 @@ export default function BlogSection() {
                 <h3 className="text-xl font-title font-semibold text-gray-900">{title}</h3>
                 <hr className="w-24 my-4 border-yellow-400" />
                 <p className="text-sm font-body text-gray-700">{description}</p>
+
                 <motion.a
                   href={link}
-                  className="inline-flex items-center mt-4 text-yellow-500 font-semibold underline hover:text-yellow-700"
-                  initial="initial"
-                  whileHover="hover"
+                  whileHover={{ scale: 1.05 }}
+                  className="inline-flex items-center gap-2 mt-4 font-menu font-semibold text-yellow-500 hover:text-yellow-600 transition-colors duration-300 group"
                 >
-                  Saiba Mais
-                  <motion.svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="ml-2 h-5 w-5 stroke-current"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    variants={arrowVariants}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </motion.svg>
+                  Saiba mais
+                  <motion.span className="group-hover:translate-x-1 transition-transform duration-300">
+                    <ArrowRight size={18} />
+                  </motion.span>
                 </motion.a>
               </div>
             </motion.article>
           ))}
         </div>
 
-        {/* CTA Button */}
         <div className="text-center mt-12">
-  <motion.a
-    href="/blog"
-    className="
-    inline-block
-    max-w-xs
-    w-full
-    px-5
-    py-5
-    text-[16px]
-    font-semibold
-    text-white
-    rounded-lg
-    bg-gradient-to-r
-    from-yellow-400
-    to-yellow-500
-    shadow-lg
-    hover:from-yellow-500
-    hover:to-yellow-600
-    hover:scale-105
-    active:scale-95
-    transition
-    duration-300
-    ease-in-out
-    cursor-pointer
-    select-none
-    mx-auto
-  "
-    whileHover={{ scale: 1.05 }}
-  >
-    Leia mais
-  </motion.a>
-</div>
+          <motion.a
+            href="/blog"
+            className="
+              inline-block
+              max-w-xs
+              w-full
+              px-5
+              py-5
+              text-[16px]
+              font-semibold
+              text-white
+              rounded-lg
+              bg-gradient-to-r
+              from-yellow-400
+              to-yellow-500
+              shadow-lg
+              hover:from-yellow-500
+              hover:to-yellow-600
+              hover:scale-105
+              active:scale-95
+              transition
+              duration-300
+              ease-in-out
+              cursor-pointer
+              select-none
+              mx-auto
+            "
+            whileHover={{ scale: 1.05 }}
+          >
+            Leia mais
+          </motion.a>
+        </div>
       </div>
     </section>
   );

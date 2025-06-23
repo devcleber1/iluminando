@@ -27,11 +27,11 @@ const About = () => {
         </a>
         <a
           href="/blog"
-          className="bg-[#000] text-white flex-1 min-w-0 min-h-[300px] p-6 flex flex-col items-center justify-center 
+          className="bg-[#fff] text-white flex-1 min-w-0 min-h-[300px] p-6 flex flex-col items-center justify-center 
           hover:brightness-90 hover:scale-[1.03] active:scale-95 transition-transform duration-300 font-title"
         >
-          <h2 className="text-[clamp(1.25rem,2.5vw,1.75rem)] font-bold">Nosso blog</h2>
-          <p className="text-[clamp(1rem,2vw,1.25rem)] mt-1 font-body">Confira nossos textos e artigos</p>
+          <h2 className="text-[clamp(1.25rem,2.5vw,1.75rem)] text-yellow-400 font-bold">Nosso blog</h2>
+          <p className="text-[clamp(1rem,2vw,1.25rem)] text-yellow-400 mt-1 font-body">Confira nossos textos e artigos</p>
         </a>
         <a
           href="/apoie"
