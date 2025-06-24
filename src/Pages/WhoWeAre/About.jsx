@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import { motion } from 'framer-motion';
 import imgMissao from '../../assets/quadro.jpg';
 import imgVisao from '../../assets/doacao.jpg';
@@ -147,7 +147,7 @@ export default function QuemSomos() {
       </section>
 
       {/* Linha do tempo estilo escada */}
-      <section className="bg-white py-20 px-6">
+      <section className="bg-white py-20 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto relative">
           <motion.h2
             className="text-4xl font-title text-yellow-500 text-center mb-16 cursor-default select-none"
@@ -162,14 +162,14 @@ export default function QuemSomos() {
           {/* Linha vertical começando com margin top para não encostar no título */}
           <div className="hidden md:block absolute left-1/2 top-24 -translate-x-1/2 h-[calc(100%-6rem)] border-l-4 border-yellow-400" />
 
-          <div className="flex flex-col space-y-16">
+          <div className="flex flex-col space-y-12">
             {timelineItems.map(({ ano, evento, img }, idx) => {
               const isEven = idx % 2 === 0;
 
               return (
                 <motion.div
                   key={idx}
-                  className={`flex flex-col md:flex-row items-center md:justify-between gap-6 ${
+                  className={`flex flex-col items-center gap-6 md:flex-row md:justify-between ${
                     isEven ? 'md:flex-row-reverse' : ''
                   }`}
                   initial={{ opacity: 0, y: 40 }}
@@ -179,7 +179,7 @@ export default function QuemSomos() {
                 >
                   {/* Texto centralizado */}
                   <div
-                    className={`md:w-1/2 flex flex-col items-center text-center px-4 ${
+                    className={`w-full md:w-1/2 flex flex-col items-center text-center px-4 ${
                       isEven ? 'md:items-center md:pr-8' : 'md:items-center md:pl-8'
                     }`}
                   >
@@ -190,7 +190,7 @@ export default function QuemSomos() {
                   </div>
 
                   {/* Ponto da linha do tempo no centro da linha vertical */}
-                  <div className="relative md:w-0">
+                  <div className="relative md:w-0 hidden md:block">
                     <div
                       className="w-6 h-6 bg-yellow-400 rounded-full border-4 border-white shadow-md -mr-4 relative"
                       style={{ left: '-11px' }}
@@ -198,11 +198,11 @@ export default function QuemSomos() {
                   </div>
 
                   {/* Imagem do lado oposto do texto */}
-                  <div className="md:w-1/2 flex justify-center">
+                  <div className="w-full md:w-1/2 flex justify-center">
                     <img
                       src={img}
                       alt={`Imagem ${ano}`}
-                      className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%] max-h-[300px] object-cover rounded-lg shadow-md"
+                      className="w-full max-w-[400px] sm:max-w-[450px] md:max-w-[80%] lg:max-w-[70%] max-h-[300px] object-cover rounded-lg shadow-md"
                     />
                   </div>
                 </motion.div>
