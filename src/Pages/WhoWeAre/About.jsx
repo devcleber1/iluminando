@@ -111,7 +111,7 @@ export default function QuemSomos() {
             },
           }}
         >
-          <p className="text-lg leading-relaxed text-gray-700">
+          <p className="text-lg font-body leading-relaxed text-gray-700">
             Iluminando o Futuro é uma organização dedicada ao desenvolvimento
             social e à transformação de vidas. Acreditamos no poder do
             conhecimento para mudar realidades e construir um futuro mais
@@ -164,7 +164,7 @@ export default function QuemSomos() {
               >
                 {title}
               </motion.h3>
-              <p className="text-lg text-gray-700 leading-relaxed">{desc}</p>
+              <p className="text-lg font-body text-gray-700 leading-relaxed">{desc}</p>
             </div>
 
             <motion.img
@@ -182,10 +182,10 @@ export default function QuemSomos() {
       </section>
 
       {/* Linha do tempo estilo escada */}
-      <section className="bg-white py-20 px-4 sm:px-6">
+      <section className="bg-yellow-400 py-20 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto relative">
           <motion.h2
-            className="text-4xl font-title text-yellow-500 text-center mb-16 cursor-default select-none"
+            className="text-4xl font-title text-white text-center mb-16 cursor-default select-none"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -194,7 +194,7 @@ export default function QuemSomos() {
             Nossa Trajetória
           </motion.h2>
 
-          <div className="hidden md:block absolute left-1/2 top-24 -translate-x-1/2 h-[calc(100%-6rem)] border-l-4 border-yellow-400" />
+          <div className="hidden md:block absolute left-1/2 top-24 -translate-x-1/2 h-[calc(100%-6rem)] border-l-4 border-white" />
 
           <div className="flex flex-col space-y-12">
             {timelineItems.map(({ ano, evento, img }, idx) => {
@@ -218,14 +218,14 @@ export default function QuemSomos() {
                     variants={timelineChildVariants}
                   >
                     <motion.h4
-                      className="text-xl font-title text-yellow-600 font-semibold mb-2"
-                      whileHover={{ scale: 1.05, color: '#D97706' }}
+                      className="text-xl font-title text-black font-semibold mb-2"
+                      whileHover={{ scale: 1.05, color: '#1F2937' }}
                       transition={{ type: 'spring', stiffness: 300 }}
                     >
                       {ano}
                     </motion.h4>
                     <motion.p
-                      className="text-gray-700 text-base max-w-md"
+                      className="text-black text-base font-body max-w-md"
                       variants={timelineChildVariants}
                     >
                       {evento}
@@ -237,7 +237,7 @@ export default function QuemSomos() {
                     variants={timelineChildVariants}
                   >
                     <motion.div
-                      className="w-6 h-6 bg-yellow-400 rounded-full border-4 border-white shadow-md -mr-4 relative"
+                      className="w-6 h-6 bg-white rounded-full border-4 border-yellow-400 shadow-md -mr-4 relative"
                       style={{ left: '-11px' }}
                       whileHover={{ scale: 1.2, backgroundColor: '#D97706' }}
                       transition={{ type: 'spring', stiffness: 300 }}
@@ -278,7 +278,7 @@ export default function QuemSomos() {
         </motion.h2>
         <motion.a
           href="#doar"
-          className="inline-block px-6 py-4 rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-700 text-white font-semibold text-lg shadow-lg cursor-pointer"
+          className="inline-block px-6 py-4 rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-700 text-white font-menu font-semibold text-lg shadow-lg cursor-pointer"
           variants={ctaVariants}
           initial="hidden"
           animate="visible"
