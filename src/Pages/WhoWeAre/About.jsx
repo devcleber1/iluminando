@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { motion } from 'framer-motion';
 import imgMissao from '../../assets/quadro.jpg';
 import imgVisao from '../../assets/doacao.jpg';
@@ -13,6 +13,34 @@ export default function QuemSomos() {
       transition: { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] },
     },
   };
+
+  const timelineItems = [
+    {
+      ano: '2015',
+      evento: 'Fundado o Instituto Iluminando o Futuro.',
+      img: imgMissao,
+    },
+    {
+      ano: '2016',
+      evento: 'Início das primeiras oficinas de balé e reforço escolar.',
+      img: imgVisao,
+    },
+    {
+      ano: '2018',
+      evento: 'Criação do projeto Natal Solidário.',
+      img: imgValores,
+    },
+    {
+      ano: '2020',
+      evento: 'Ações de apoio durante a pandemia.',
+      img: imgMissao,
+    },
+    {
+      ano: '2023',
+      evento: 'Ampliação dos projetos para novas comunidades.',
+      img: imgVisao,
+    },
+  ];
 
   return (
     <main className="font-body text-gray-800">
@@ -118,11 +146,11 @@ export default function QuemSomos() {
         ))}
       </section>
 
-      {/* Linha do tempo */}
+      {/* Linha do tempo estilo escada */}
       <section className="bg-white py-20 px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto relative">
           <motion.h2
-            className="text-4xl font-title text-yellow-500 text-center mb-12 cursor-default select-none"
+            className="text-4xl font-title text-yellow-500 text-center mb-16 cursor-default select-none"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -130,40 +158,57 @@ export default function QuemSomos() {
           >
             Nossa Trajetória
           </motion.h2>
-          <ul className="relative border-l border-yellow-400 pl-6 space-y-10">
-            {[
-              { ano: '2015', evento: 'Fundado o Instituto Iluminando o Futuro.' },
-              {
-                ano: '2016',
-                evento: 'Início das primeiras oficinas de balé e reforço escolar.',
-              },
-              { ano: '2018', evento: 'Criação do projeto Natal Solidário.' },
-              { ano: '2020', evento: 'Ações de apoio durante a pandemia.' },
-              {
-                ano: '2023',
-                evento: 'Ampliação dos projetos para novas comunidades.',
-              },
-            ].map(({ ano, evento }, idx) => (
-              <motion.li
-                key={idx}
-                className="relative cursor-default rounded-md p-3 hover:bg-yellow-50"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                whileHover={{
-                  scale: 1.03,
-                  boxShadow: '0 8px 20px rgba(251, 191, 36, 0.4)',
-                }}
-                viewport={{ once: true }}
-                transition={{ type: 'spring', stiffness: 200 }}
-              >
-                <span className="absolute left-[-12px] top-1 w-4 h-4 bg-yellow-400 rounded-full border-2 border-white" />
-                <h4 className="text-xl font-title font-semibold text-gray-900">
-                  {ano}
-                </h4>
-                <p className="text-gray-700 text-base">{evento}</p>
-              </motion.li>
-            ))}
-          </ul>
+
+          {/* Linha vertical começando com margin top para não encostar no título */}
+          <div className="hidden md:block absolute left-1/2 top-24 -translate-x-1/2 h-[calc(100%-6rem)] border-l-4 border-yellow-400" />
+
+          <div className="flex flex-col space-y-16">
+            {timelineItems.map(({ ano, evento, img }, idx) => {
+              const isEven = idx % 2 === 0;
+
+              return (
+                <motion.div
+                  key={idx}
+                  className={`flex flex-col md:flex-row items-center md:justify-between gap-6 ${
+                    isEven ? 'md:flex-row-reverse' : ''
+                  }`}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.1 }}
+                >
+                  {/* Texto centralizado */}
+                  <div
+                    className={`md:w-1/2 flex flex-col items-center text-center px-4 ${
+                      isEven ? 'md:items-center md:pr-8' : 'md:items-center md:pl-8'
+                    }`}
+                  >
+                    <h4 className="text-xl font-title text-yellow-600 font-semibold mb-2">
+                      {ano}
+                    </h4>
+                    <p className="text-gray-700 text-base max-w-md">{evento}</p>
+                  </div>
+
+                  {/* Ponto da linha do tempo no centro da linha vertical */}
+                  <div className="relative md:w-0">
+                    <div
+                      className="w-6 h-6 bg-yellow-400 rounded-full border-4 border-white shadow-md -mr-4 relative"
+                      style={{ left: '-11px' }}
+                    />
+                  </div>
+
+                  {/* Imagem do lado oposto do texto */}
+                  <div className="md:w-1/2 flex justify-center">
+                    <img
+                      src={img}
+                      alt={`Imagem ${ano}`}
+                      className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%] max-h-[300px] object-cover rounded-lg shadow-md"
+                    />
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
