@@ -5,7 +5,6 @@ import Partners from '../../Components/componentsHome/Partners/Partners';
 import Blog from '../../Components/componentsHome/Blog/Blog';
 import Projects from '../../Components/componentsHome/Projects/Projects';
 import CTA from '../../Components/componentsHome/CTA/Cta';
-import Footer from '../../Components/componentsHome/Footer/Footer';
 export default function Home() {
   return (
     <>
@@ -16,7 +15,6 @@ export default function Home() {
       <Workshop/>
       <Blog/>
       <CTA/>  
-      <Footer/>
     </>
   );
 }

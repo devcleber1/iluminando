@@ -1,28 +1,14 @@
-import { useState, useEffect } from 'react';
-import { Dialog, DialogPanel } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useState, useEffect } from 'react'
 
-import Ilumina from '../../../assets/iluminando.png';
-import Banner1 from '../../../assets/ilumina.webp';
-import Banner3 from '../../../assets/flamengo.webp';
-import Banner4 from '../../../assets/natal.webp';
-
-const navigation = [
-  { name: 'Home', href: '#' },
-  { name: 'Quem Somos', href: '#' },
-  { name: 'Transparência', href: '#' },
-  { name: 'Oficinas', href: '#' },
-  { name: 'Projetos', href: '#' },
-  { name: 'Blog', href: '#' },
-  { name: 'Galeria', href: '#' },
-  { name: 'Contato', href: '#' },
-]
+import Banner1 from '../../../assets/ilumina.webp'
+import Banner3 from '../../../assets/flamengo.webp'
+import Banner4 from '../../../assets/natal.webp'
 
 const carouselImages = [
   { src: Banner1, alt: 'Imagem ilustrativa de iluminação' },
   { src: Banner3, alt: 'Imagem do Flamengo com a torcida' },
   { src: Banner4, alt: 'Imagem de Natal com luzes e decoração' },
-];
+]
 
 const textShadowStyle = {
   textShadow: `
@@ -31,7 +17,7 @@ const textShadowStyle = {
     -2px 2px 0 #000,
     2px 2px 0 #000
   `,
-};
+}
 
 const textShadowStyleParagraph = {
   textShadow: `
@@ -40,27 +26,17 @@ const textShadowStyleParagraph = {
     -1px 1px 0 #000,
     1px 1px 0 #000
   `,
-};
+}
 
-const navLinkTextShadow = {
-  textShadow: `
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000
-  `,
-};
-
-export default function Example() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState(0);
+export default function Hero() {
+  const [currentImage, setCurrentImage] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % carouselImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+      setCurrentImage((prev) => (prev + 1) % carouselImages.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div className="bg-white font-body w-screen overflow-x-hidden">
@@ -70,97 +46,6 @@ export default function Example() {
           <img key={index} src={image.src} alt={image.alt} loading="lazy" />
         ))}
       </div>
-
-      {/* Cabeçalho */}
-      <header className="absolute inset-x-0 top-0 z-50">
-        <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
-          {/* Logo */}
-          <div className="flex flex-1">
-            <a href="#">
-              <span className="sr-only">Iluminando o Futuro</span>
-              <img alt="Iluminando o Futuro" src={Ilumina} className="h-20 w-auto" />
-            </a>
-          </div>
-
-          {/* Navegação desktop */}
-          <div className="hidden lg:flex lg:flex-1 lg:justify-center lg:gap-x-8">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                style={navLinkTextShadow}
-                className="font-menu text-base font-bold text-gray-200 hover:text-yellow-400 transition-colors duration-200 whitespace-nowrap"
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-
-          {/* Botão Doar */}
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="#"
-              className="font-menu rounded-md bg-transparent border border-yellow-400 px-3.5 py-2.5 text-sm font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-white transition-colors duration-200"
-            >
-              Quero Doar
-            </a>
-          </div>
-
-          {/* Botão menu mobile */}
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-yellow-400"
-            >
-              <span className="sr-only">Abrir menu principal</span>
-              <Bars3Icon aria-hidden="true" className="size-6" />
-            </button>
-          </div>
-        </nav>
-
-        {/* Drawer menu mobile */}
-        <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
-          <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div className="flex items-center justify-between">
-              <a href="#">
-                <span className="sr-only">Iluminando o Futuro</span>
-                <img alt="Iluminando o Futuro" src={Ilumina} className="h-12 w-auto" />
-              </a>
-              <button
-                type="button"
-                onClick={() => setMobileMenuOpen(false)}
-                className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              >
-                <span className="sr-only">Fechar menu</span>
-                <XMarkIcon aria-hidden="true" className="size-6" />
-              </button>
-            </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="font-menu -mx-3 block rounded-lg px-3 py-2 text-lg font-bold text-black hover:text-yellow-400 transition-colors duration-200 focus:outline-none"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                  <a
-                    href="#"
-                    className="font-menu -mx-3 block rounded-md bg-yellow-400 px-3.5 py-2 text-lg font-semibold text-white hover:bg-yellow-500 transition-colors duration-200 focus:outline-none mt-4 text-center"
-                  >
-                    Quero Doar
-                  </a>
-                </div>
-              </div>
-            </div>
-          </DialogPanel>
-        </Dialog>
-      </header>
 
       {/* HERO */}
       <div className="relative isolate min-h-screen w-full px-6 pt-14 lg:px-8 overflow-hidden">
@@ -202,13 +87,13 @@ export default function Example() {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
-              href="#"
+              href="/doacoes"
               className="font-menu rounded-md bg-transparent border border-yellow-400 px-3.5 py-2.5 text-sm font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-white transition-colors duration-200"
             >
               Fazer Doação
             </a>
             <a
-              href="#"
+              href="/voluntario"
               className="font-menu rounded-md bg-transparent border border-yellow-400 px-3.5 py-2.5 text-sm font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-white transition-colors duration-200"
             >
               Venha Fazer Parte
@@ -217,5 +102,5 @@ export default function Example() {
         </div>
       </div>
     </div>
-  );
+  )
 }

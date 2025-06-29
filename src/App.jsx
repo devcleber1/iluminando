@@ -1,8 +1,8 @@
-import Home from './Pages/WhoWeAre/About'; 
+import Routes from './routes/routes.jsx'; 
 export default function App() {
   return (
     <>
-      <Home />
+      <Routes />
     </>
   );
 }
