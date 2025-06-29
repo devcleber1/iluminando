@@ -30,9 +30,9 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full inset-x-0 top-0 z-50 ${
+      className={`z-50 ${
         isHome
-          ? 'bg-transparent transition-none'
+          ? 'absolute w-full inset-x-0 top-0 bg-transparent transition-none'
           : 'bg-white shadow-md transition-colors duration-300'
       }`}
     >

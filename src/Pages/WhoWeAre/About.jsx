@@ -81,7 +81,7 @@ export default function QuemSomos() {
   return (
     <main className="font-body text-gray-800">
       {/* Título */}
-      <section className="bg-yellow-400 py-20 mt-32">
+      <section className="bg-yellow-400 py-20 mt-30">
         <motion.h1
           className="text-5xl font-title font-bold text-white text-center cursor-default select-none"
           initial={{ opacity: 0, scale: 0.8 }}

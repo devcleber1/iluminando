@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react'; // Biblioteca recomendada para ícones modernos
+import { ArrowRight } from 'lucide-react'; 
 import workshops from './data';
 
 export default function WorkshopsSection() {
