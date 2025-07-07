@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 import { useLocation, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
@@ -22,20 +22,6 @@ export default function Workshops() {
       opacity: 1,
       y: 0,
       transition: { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] },
-    },
-  }
-
-  const timelineItemVariants = {
-    hidden: { opacity: 0, scale: 0.9, y: 40 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: [0.43, 0.13, 0.23, 0.96],
-        staggerChildren: 0.2,
-      },
     },
   }
 
@@ -124,10 +110,7 @@ export default function Workshops() {
         />
       </Helmet>
 
-      {/* Título animado estilo "Quem Somos", mantendo gradiente */}
-      <section
-        className="bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-300 py-20 mt-30"
-      >
+      <section className="bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-300 py-20 mt-30">
         <motion.h1
           className="text-5xl font-title font-bold text-white text-center cursor-default select-none"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -152,7 +135,6 @@ export default function Workshops() {
         </motion.p>
       </section>
 
-      {/* Detalhe da oficina selecionada */}
       {selectedWorkshop ? (
         <motion.section
           className="py-20 px-6 max-w-3xl mx-auto"
@@ -187,17 +169,16 @@ export default function Workshops() {
           </div>
         </motion.section>
       ) : (
-        // Lista de oficinas padrão
         <section className="py-20 px-6 max-w-7xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {workshops.map(({ id, title, icon: Icon, image, description, impact }) => (
-            <motion.div
-              key={id}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200 flex flex-col"
-              variants={timelineItemVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
+           <motion.div
+           key={id}
+           className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200 flex flex-col"
+           initial={{ opacity: 0, y: 40 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.8 }}
+         >
+         
               <img
                 src={image}
                 alt={`Imagem de ${title}`}
