@@ -2,84 +2,27 @@ import React from 'react';
 import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import 'tailwindcss/tailwind.css';
+import postsData from './blog.json'; 
 
-// Dados dos posts (mock)
-const posts = [
-  {
-    id: 1,
-    title: 'Como usar notas adesivas para resolução de problemas',
-    date: '20 Outubro 2019',
-    image: 'https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80',
-    content: 'Este é o conteúdo do post sobre como usar notas adesivas para resolução de problemas. Aqui você pode adicionar mais detalhes sobre o tema.',
-    author: 'Amelia Anderson',
-    authorRole: 'Lead Developer',
-    authorImage: 'https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80'
-  },
-  {
-    id: 2,
-    title: 'Como usar notas adesivas para resolução de problemas',
-    date: '20 Outubro 2019',
-    image: 'https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80',
-    content: 'Este é outro post sobre notas adesivas. Aqui você pode explicar diferentes técnicas e abordagens.',
-    author: 'Amelia Anderson',
-    authorRole: 'Lead Developer',
-    authorImage: 'https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80'
-  },
-  {
-    id: 3,
-    title: 'Rotina matinal para melhorar seu humor',
-    date: '25 Novembro 2020',
-    image: 'https://images.unsplash.com/photo-1544654803-b69140b285a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80',
-    content: 'Este post explora uma rotina matinal que pode ajudar a melhorar seu humor e produtividade.',
-    author: 'Amelia Anderson',
-    authorRole: 'Lead Developer',
-    authorImage: 'https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80'
-  },
-  {
-    id: 4,
-    title: 'Todos os recursos que você deseja conhecer',
-    date: '30 Setembro 2020',
-    image: 'https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1547&q=80',
-    content: 'Neste post, detalhamos todos os recursos incríveis que você precisa conhecer.',
-    author: 'Amelia Anderson',
-    authorRole: 'Lead Developer',
-    authorImage: 'https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80'
-  },
-  {
-    id: 5,
-    title: 'Espaço de trabalho minimalista para suas inspirações',
-    date: '13 Outubro 2019',
-    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1484&q=80',
-    content: 'Um guia sobre como criar um espaço de trabalho minimalista para aumentar sua criatividade.',
-    author: 'Amelia Anderson',
-    authorRole: 'Lead Developer',
-    authorImage: 'https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80'
-  },
-  {
-    id: 6,
-    title: 'O que você quer saber sobre Blockchain',
-    date: '20 Outubro 2019',
-    image: 'https://images.unsplash.com/photo-1624996379697-f01d168b1a52?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80',
-    content: 'Este post aborda os conceitos básicos e avançados sobre blockchain.',
-    author: 'Amelia Anderson',
-    authorRole: 'Lead Developer',
-    authorImage: 'https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80'
-  }
-];
+const normalizeTitle = (title) => {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+};
 
-// Variantes para animações
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 
-// Componente para a página de todos os blogs
 const BlogList = () => {
   return (
     <main className="font-body text-gray-800">
       <section className="bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-300 py-20">
         <motion.h1
-          className="text-5xl font-title font-bold text-white text-center cursor-default select-none"
+          className="text-5xl font-title font-bold text-white text-center cursor-default select-none sm:text-4xl"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -94,8 +37,8 @@ const BlogList = () => {
 
       <section className="bg-white py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post, index) => (
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {postsData.map((post, index) => (
               <motion.div
                 key={post.id}
                 className="flex flex-col items-center text-center"
@@ -103,19 +46,21 @@ const BlogList = () => {
                 animate="visible"
                 variants={fadeInUp}
               >
-                <motion.img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full max-w-xs h-48 object-cover rounded-lg shadow-lg cursor-pointer"
-                  whileHover={{ scale: 1.05 }}
-                />
+                <Link to={`/blog/${normalizeTitle(post.title)}`}>
+                  <motion.img
+                    src={post.images[0]} // Usa a primeira imagem como capa
+                    alt={post.title}
+                    className="w-full max-w-xs h-48 object-cover rounded-lg shadow-lg cursor-pointer sm:max-w-sm md:max-w-md"
+                    whileHover={{ scale: 1.05 }}
+                  />
+                </Link>
                 <Link
-                  to={`/blog/${post.id}`}
-                  className="mt-4 text-xl font-title text-yellow-500 font-semibold hover:underline"
+                  to={`/blog/${normalizeTitle(post.title)}`}
+                  className="mt-2 text-xl font-title text-yellow-500 font-semibold hover:underline sm:text-lg"
                 >
                   {post.title}
                 </Link>
-                <p className="text-sm font-body text-gray-700 leading-relaxed">
+                <p className="text-sm font-body text-gray-700 leading-relaxed sm:text-base">
                   Em: {post.date}
                 </p>
               </motion.div>
@@ -127,11 +72,10 @@ const BlogList = () => {
   );
 };
 
-// Componente para a página individual de um blog
 const BlogPost = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const post = posts.find((p) => p.id === parseInt(id));
+  const post = postsData.find((p) => normalizeTitle(p.title) === id);
 
   if (!post) {
     return (
@@ -143,15 +87,14 @@ const BlogPost = () => {
     );
   }
 
-  // Filtrar outros posts para links relacionados, excluindo o post atual
-  const otherPosts = posts.filter(p => p.id !== post.id);
+  const otherPosts = postsData.filter(p => normalizeTitle(p.title) !== id);
 
   return (
     <main className="font-body text-gray-800">
       <section className="bg-white py-20 px-6">
-        <div className="container mx-auto px-6 py-10">
+        <div className="container mx-auto px-4 sm:px-6 py-10">
           <motion.div
-            className="flex flex-col lg:flex-row gap-10"
+            className="flex flex-col lg:flex-row gap-6 sm:gap-8"
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
@@ -170,40 +113,86 @@ const BlogPost = () => {
                 </motion.span>
               </motion.button>
               <motion.img
-                className="object-cover w-full h-80 rounded-xl shadow-lg"
-                src={post.image}
+                className="object-cover w-full h-64 sm:h-80 md:h-96 rounded-xl shadow-lg"
+                src={post.images[0]} // Primeira imagem como capa
                 alt={post.title}
                 whileHover={{ scale: 1.05 }}
               />
               <div className="mt-6">
-                <h1 className="mt-4 text-3xl font-semibold text-gray-800 font-title">
+                <h1 className="mt-4 text-2xl sm:text-3xl font-semibold text-gray-800 font-title">
                   {post.title}
                 </h1>
                 <div className="flex items-center mt-4">
                   <img
-                    className="w-10 h-10 rounded-full object-cover"
+                    className="w-8 sm:w-10 h-8 sm:h-10 rounded-full object-cover"
                     src={post.authorImage}
                     alt={post.author}
                   />
-                  <div className="ml-4">
-                    <h2 className="text-sm text-gray-700 font-body">{post.author}</h2>
-                    <p className="text-sm text-gray-500 font-body">{post.authorRole}</p>
+                  <div className="ml-2 sm:ml-4">
+                    <h2 className="text-sm sm:text-base text-gray-700 font-body">{post.author}</h2>
+                    <p className="text-xs sm:text-sm text-gray-500 font-body">{post.authorRole}</p>
+                    <p className="text-xs sm:text-sm text-gray-500 font-body mt-1">{post.authorBio}</p>
                   </div>
                 </div>
-                <p className="mt-6 text-gray-700 font-body leading-relaxed">
-                  {post.content}
-                </p>
+                <div className="mt-6 space-y-6">
+                  <p className="text-gray-700 font-body leading-relaxed">{post.content}</p>
+                  {post.images.length > 1 && (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {post.images.slice(1).map((image, index) => (
+                        <motion.img
+                          key={index}
+                          src={image}
+                          alt={`${post.title} - Imagem ${index + 2}`}
+                          className="w-full h-40 object-cover rounded-lg shadow-md"
+                          whileHover={{ scale: 1.05 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 0.1 * index }}
+                        />
+                      ))}
+                    </div>
+                  )}
+                  {post.videos.length > 0 && (
+                    <div className="mt-8 grid grid-cols-1 gap-4">
+                      <h2 className="text-xl font-semibold text-gray-700 font-title">Vídeos Relacionados</h2>
+                      {post.videos.map((video, index) => (
+                        <div key={index} className="w-full">
+                          <iframe
+                            src={video}
+                            title={`${post.title} - Vídeo ${index + 1}`}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="w-full h-64 sm:h-72 rounded-lg shadow-md"
+                          ></iframe>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-            <div className="lg:w-1/3 mt-10 lg:mt-0">
+            <div className="lg:w-1/3 mt-6 sm:mt-8 lg:mt-0">
               {otherPosts.map((otherPost, index) => (
                 <div key={otherPost.id} className="mt-4">
-                  <Link
-                    to={`/blog/${otherPost.id}`}
-                    className="block text-yellow-500 font-body hover:text-yellow-600"
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
                   >
-                    {otherPost.title}
-                  </Link>
+                    <Link
+                      to={`/blog/${normalizeTitle(otherPost.title)}`}
+                      className="block text-yellow-500 font-body text-sm sm:text-base hover:text-yellow-600 flex items-center gap-2 transition-colors duration-200"
+                    >
+                      {otherPost.title}
+                      <motion.span
+                        className="inline-block transition-transform duration-200 group-hover:translate-x-1"
+                      >
+                        ➜
+                      </motion.span>
+                    </Link>
+                    <p className="text-xs text-gray-500 mt-1">{otherPost.date}</p>
+                  </motion.div>
                   {index < otherPosts.length - 1 && (
                     <hr className="my-4 border-gray-300" />
                   )}
@@ -217,7 +206,6 @@ const BlogPost = () => {
   );
 };
 
-// Componente principal do aplicativo
 const BlogApp = () => {
   const location = useLocation();
   const isBlogPost = location.pathname.includes('/blog/') && location.pathname !== '/blog';
