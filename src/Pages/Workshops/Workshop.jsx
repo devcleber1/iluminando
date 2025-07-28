@@ -3,16 +3,16 @@ import { Helmet } from 'react-helmet-async'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   ArrowRight,
-  Drama,
   Book,
+  Calculator,
   X,
 } from 'lucide-react'
 
 import workshopsData from './workshops'
 
 const iconMap = {
+  Calculator,
   Book,
-  Drama,
 }
 
 export default function Workshops() {
@@ -20,7 +20,7 @@ export default function Workshops() {
 
   const workshops = workshopsData.map((workshop) => ({
     ...workshop,
-    icon: iconMap[workshop.icon] || Book, // fallback caso não encontre
+    icon: iconMap[workshop.icon] || Book, 
   }))
 
   function closeModal() {
