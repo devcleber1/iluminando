@@ -8,6 +8,7 @@ import WhoWeAre from '../Pages/WhoWeAre/About';
 import Workshops from '../Pages/Workshops/Workshop';
 import BlogApp from '../Pages/Blog/Blog';
 import Gallery from '../Pages/Gallery/Gallery';
+import Volunter from '../Pages/Volunter/Volunter';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/blog" element={<BlogApp />} />
             <Route path="/blog/:id" element={<BlogApp />} />
             <Route path="/galeria" element={<Gallery />} />
+            <Route path="/voluntario" element={<Volunter />} />
           </Routes>
         </main>
         <Footer />
