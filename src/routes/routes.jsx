@@ -9,6 +9,7 @@ import Workshops from '../Pages/Workshops/Workshop';
 import BlogApp from '../Pages/Blog/Blog';
 import Gallery from '../Pages/Gallery/Gallery';
 import Volunter from '../Pages/Volunter/Volunter';
+import Donate from '../Pages/Donate/Donate';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/blog/:id" element={<BlogApp />} />
             <Route path="/galeria" element={<Gallery />} />
             <Route path="/voluntario" element={<Volunter />} />
+            <Route path="/doacoes" element={<Donate />} />
           </Routes>
         </main>
         <Footer />

@@ -18,7 +18,7 @@ const About = () => {
       {/* CTA sempre lado a lado */}
       <div className="flex w-full">
         <a
-          href="/quem-somos"
+          href="/sobre"
           className="bg-[#ffce26] text-white flex-1 min-w-0 min-h-[300px] p-6 flex flex-col items-center justify-center 
           hover:brightness-95 hover:scale-[1.03] active:scale-95 transition-transform duration-300 font-title"
         >
@@ -34,7 +34,7 @@ const About = () => {
           <p className="text-[clamp(1rem,2vw,1.25rem)] text-yellow-400 mt-1 font-body">Confira nossos textos e artigos</p>
         </a>
         <a
-          href="/apoie"
+          href="/doacoes"
           className="bg-[#ffce26] text-white flex-1 min-w-0 min-h-[300px] p-6 flex flex-col items-center justify-center 
           hover:brightness-95 hover:scale-[1.03] active:scale-95 transition-transform duration-300 font-title"
         >

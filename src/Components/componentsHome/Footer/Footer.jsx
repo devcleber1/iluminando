@@ -49,14 +49,13 @@ export default function Footer() {
                 <h3 className="text-lg font-semibold uppercase font-title mb-2">Links Rápidos</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <div>
-                    <a href="/sobre" className="block mt-2 text-sm font-menu text-black hover:text-white">Home</a>
-                    <a href="/educacao" className="block mt-2 text-sm font-menu text-black hover:text-white">Quem somos</a>
-                    <a href="/inclusao" className="block mt-2 text-sm font-menu text-black hover:text-white">Galeria</a>
+                    <a href="/" className="block mt-2 text-sm font-menu text-black hover:text-white">Home</a>
+                    <a href="/sobre" className="block mt-2 text-sm font-menu text-black hover:text-white">Quem somos</a>
+                    <a href="/galeria" className="block mt-2 text-sm font-menu text-black hover:text-white">Galeria</a>
                   </div>
                   <div>
-                    <a href="/doacao" className="block mt-2 text-sm font-menu text-black hover:text-white">Oficinas</a>
-                    <a href="/blog" className="block mt-2 text-sm font-menu text-black hover:text-white">Transparência</a>
-                    <a href="/contato" className="block mt-2 text-sm font-menu text-black hover:text-white">Blog</a>
+                    <a href="/oficinas" className="block mt-2 text-sm font-menu text-black hover:text-white">Oficinas</a>
+                    <a href="/blog" className="block mt-2 text-sm font-menu text-black hover:text-white">Blog</a>
                   </div>
                 </div>
               </div>

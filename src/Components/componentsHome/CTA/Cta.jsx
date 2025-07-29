@@ -30,7 +30,7 @@ export default function HeroSejaDiferenca() {
             </p>
 
             <motion.a
-              href="#apoie"
+              href="/doacoes"
               whileHover={{ scale: 1.05 }}
               className="
                 flex
