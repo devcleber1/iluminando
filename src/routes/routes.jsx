@@ -7,6 +7,7 @@ import Home from '../Pages/Home/Home';
 import WhoWeAre from '../Pages/WhoWeAre/About';
 import Workshops from '../Pages/Workshops/Workshop';
 import BlogApp from '../Pages/Blog/Blog';
+import Gallery from '../Pages/Gallery/Gallery';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/oficinas" element={<Workshops />} />
             <Route path="/blog" element={<BlogApp />} />
             <Route path="/blog/:id" element={<BlogApp />} />
+            <Route path="/galeria" element={<Gallery />} />
           </Routes>
         </main>
         <Footer />
