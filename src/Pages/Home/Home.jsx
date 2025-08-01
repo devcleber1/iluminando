@@ -5,6 +5,8 @@ import Partners from '../../Components/componentsHome/Partners/Partners';
 import Blog from '../../Components/componentsHome/Blog/Blog';
 import Projects from '../../Components/componentsHome/Projects/Projects';
 import CTA from '../../Components/componentsHome/CTA/Cta';
+import Whatsaap from '../../Components/componentsHome/Whatsaap/Whatsaap';
+import Social from '../../Components/componentsHome/SocialMedia/Social';
 export default function Home() {
   return (
     <>
@@ -15,6 +17,8 @@ export default function Home() {
       <Workshop/>
       <Blog/>
       <CTA/>  
+      <Whatsaap/>
+      <Social/>
     </>
   );
 }
