@@ -1,25 +1,25 @@
-import reforco1 from './ReforçoMatemática/reforço.jpg'
-import reforco2 from './ReforçoMatemática/reforço2.jpg'
-import reforco3 from './ReforçoMatemática/reforço3.jpg'
-import escolar from './ReforçoEscolar/escolar6.jpg'
-import escolar2 from './ReforçoEscolar/escolar2.jpg'  
-import escolar3 from './ReforçoEscolar/escolar3.jpg' 
-import escolar4 from './ReforçoEscolar/escolar4.jpg' 
-import escolar5 from './ReforçoEscolar/escolar5.jpg'
-import escolar6 from './ReforçoEscolar/escolar.jpg'
-import alfabetizacao from './Alfabetização/alfabetizacao5.jpg'
-import alfabetizacao2 from './Alfabetização/alfabetizacao2.jpg'
-import alfabetizacao3 from './Alfabetização/alfabetizacao3.jpg'
-import alfabetizacao4 from './Alfabetização/alfabetizacao4.jpg'
-import alfabetizacao5 from './Alfabetização/alfabetizacao.jpg'
-import capoeira from './Capoeira/capoeira.jpg'
-import capoeira2 from './Capoeira/capoeira2.jpg'
-import capoeira3 from './Capoeira/capoeira3.jpg'
-import capoeira4 from './Capoeira/capoeira4.jpg'
-import futebol from './Futebol/futebol3.jpg'
-import futebol2 from './Futebol/futebol2.jpg'
-import futebol3 from './Futebol/futebol.jpg'
-import futebol4 from './Futebol/futebol4.jpg'
+import reforco1 from './ReforçoMatemática/reforço.jpg';
+import reforco2 from './ReforçoMatemática/reforço2.jpg';
+import reforco3 from './ReforçoMatemática/reforço3.jpg';
+import escolar from './ReforçoEscolar/escolar6.jpg';
+import escolar2 from './ReforçoEscolar/escolar2.jpg';
+import escolar3 from './ReforçoEscolar/escolar3.jpg';
+import escolar4 from './ReforçoEscolar/escolar4.jpg';
+import escolar5 from './ReforçoEscolar/escolar5.jpg';
+import escolar6 from './ReforçoEscolar/escolar.jpg';
+import alfabetizacao from './Alfabetização/alfabetizacao5.jpg';
+import alfabetizacao2 from './Alfabetização/alfabetizacao2.jpg';
+import alfabetizacao3 from './Alfabetização/alfabetizacao3.jpg';
+import alfabetizacao4 from './Alfabetização/alfabetizacao4.jpg';
+import alfabetizacao5 from './Alfabetização/alfabetizacao.jpg';
+import capoeira from './Capoeira/capoeira.jpg';
+import capoeira2 from './Capoeira/capoeira2.jpg';
+import capoeira3 from './Capoeira/capoeira3.jpg';
+import capoeira4 from './Capoeira/capoeira4.jpg';
+import futebol from './Futebol/futebol3.jpg';
+import futebol2 from './Futebol/futebol2.jpg';
+import futebol3 from './Futebol/futebol.jpg';
+import futebol4 from './Futebol/futebol4.jpg';
 
 const workshops = [
   {
@@ -47,10 +47,10 @@ const workshops = [
     studentsInfo: '30+ alunos estudando',
   },
   {
-    id: 'alfabetização',
+    id: 'alfabetizacao',
     title: 'Alfabetização',
     icon: 'Book',
-    images: [alfabetizacao, alfabetizacao2, alfabetizacao3, alfabetizacao4, alfabetizacao5],  
+    images: [alfabetizacao, alfabetizacao2, alfabetizacao3, alfabetizacao4, alfabetizacao5],
     description:
       'Nossa ONG tem como missão promover a alfabetização de crianças e adultos em situações de vulnerabilidade social. Acreditamos que a leitura e a escrita são direitos fundamentais para o exercício da cidadania e o desenvolvimento pessoal. Por meio de programas de ensino personalizados, oferecemos apoio a estudantes que estão em processo de alfabetização, utilizando metodologias dinâmicas e interativas que facilitam o aprendizado.',
     infoText: `Nossa ONG tem como missão promover a alfabetização de crianças e adultos em situações de vulnerabilidade social. Acreditamos que a leitura e a escrita são direitos fundamentais para o exercício da cidadania e o desenvolvimento pessoal. Por meio de programas de ensino personalizados, oferecemos apoio a estudantes que estão em processo de alfabetização, utilizando metodologias dinâmicas e interativas que facilitam o aprendizado.`,
@@ -59,10 +59,10 @@ const workshops = [
     studentsInfo: '10+ alunos estudando',
   },
   {
-    id: 'Capoeira',
+    id: 'capoeira',
     title: 'Capoeira',
     icon: 'Book',
-    images: [capoeira, capoeira2, capoeira3, capoeira4], 
+    images: [capoeira, capoeira2, capoeira3, capoeira4],
     description:
       'Nossa ONG promove a capoeira como instrumento de transformação social, resgate cultural e fortalecimento comunitário. Oferecemos aulas e rodas de capoeira que integram movimento, música e história, proporcionando às crianças, jovens e adultos uma experiência única de aprendizado e conexão com suas raízes. Mais do que uma expressão cultural, a capoeira ensina valores como disciplina, respeito, resistência e cooperação. Acreditamos que, por meio dessa arte, é possível empoderar indivíduos e construir um futuro mais inclusivo e cheio de possibilidades!',
     infoText: `Nossa ONG tem como missão promover a capoeira como um poderoso instrumento de transformação social, resgate cultural e fortalecimento comunitário. Por meio de aulas e rodas de capoeira, integramos movimento, música e história, oferecendo a crianças, jovens e adultos uma experiência envolvente de aprendizado e conexão profunda com suas raízes culturais. Mais do que uma expressão artística, a capoeira transmite valores essenciais como disciplina, respeito, resiliência e cooperação, incentivando o desenvolvimento pessoal e coletivo. Com um ambiente acolhedor e dinâmico, nossa iniciativa busca empoderar indivíduos, celebrar a diversidade cultural e construir comunidades mais unidas, inclusivas e cheias de possibilidades para um futuro transformador.`,
@@ -73,8 +73,8 @@ const workshops = [
   {
     id: 'futebol',
     title: 'Futebol',
-    icon: 'Book',
-    images: [futebol, futebol2, futebol3, futebol4],  
+    icon: 'Book', // Considere criar um ícone específico para futebol, se disponível
+    images: [futebol, futebol2, futebol3, futebol4],
     description:
       'Nossa ONG utiliza o futebol como ferramenta de inclusão social, desenvolvimento pessoal e formação cidadã. Por meio de treinos e atividades educativas, promovemos a disciplina, o trabalho em equipe e o respeito entre crianças e jovens de comunidades. Além de ensinar técnicas e fundamentos do esporte, também incentivamos valores como comprometimento, liderança e solidariedade. Acreditamos que o futebol vai além do campo, sendo um caminho para construir oportunidades e transformar vidas!',
     infoText: `Nossa ONG utiliza o futebol como uma poderosa ferramenta de inclusão social, desenvolvimento pessoal e formação cidadã. Por meio de treinos estruturados e atividades educativas, promovemos valores como disciplina, trabalho em equipe, respeito e solidariedade entre crianças e jovens de comunidades. Além de ensinar técnicas e fundamentos do esporte, nossas iniciativas incentivam o comprometimento, a liderança e a cooperação, fortalecendo o caráter e a autoestima dos participantes. Em um ambiente acolhedor e motivador, acreditamos que o futebol transcende o campo, criando oportunidades, transformando vidas e construindo um futuro mais justo e promissor para todos.`,
@@ -82,6 +82,6 @@ const workshops = [
       'Terças e Quartas, Grupo 1: 17:30h às 19h, e Grupo 2: 19h às 20:30',
     studentsInfo: '30+ alunos estudando',
   },
-]
+];
 
-export default workshops
+export default workshops;

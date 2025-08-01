@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react'; 
-import workshops from './data';
+import { ArrowRight } from 'lucide-react';
+import workshops from './data'; // Certifique-se de que o caminho está correto
 
 export default function WorkshopsSection() {
   return (
@@ -21,7 +21,7 @@ export default function WorkshopsSection() {
       <div className="grid gap-6 row-gap-10 lg:grid-cols-3">
         {workshops.map((workshop, idx) => (
           <motion.div
-            key={idx}
+            key={workshop.id} // Usando workshop.id para unicidade
             className="group transform transition duration-300 rounded-lg bg-white shadow-md hover:shadow-2xl hover:scale-[1.03]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export default function WorkshopsSection() {
               </p>
 
               <motion.a
-                href={workshop.link || '/oficinas'}
+                href={`/oficinas/${workshop.id}`} // Link dinâmico com o ID
                 whileHover={{ scale: 1.05 }}
                 className="inline-flex items-center gap-2 font-menu font-semibold text-yellow-500 hover:text-yellow-600 transition-colors duration-300 group"
               >
