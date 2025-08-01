@@ -1,54 +1,54 @@
 [
-    {
-      "id": 1,
-      "title": "Como usar notas adesivas para resolução de problemas",
-      "date": "20 Outubro 2019",
-      "images": [
-        "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
-        "https://images.unsplash.com/photo-1526491109672-74740652b963?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-      ],
-      "videos": [
-        "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        "https://www.youtube.com/embed/1Z4bE0Q5i1o"
-      ],
-      "content": "As notas adesivas são ferramentas simples, mas poderosas, que podem transformar a forma como abordamos a resolução de problemas. No ambiente de trabalho, elas ajudam a organizar ideias durante brainstormings, permitindo que equipes visualizem e priorizem tarefas, como no método Kanban, onde cada nota representa uma tarefa. Além disso, são úteis em casa para planejar projetos pessoais ou estudar, pois podem ser reorganizadas facilmente. Com criatividade e organização, elas se tornam uma extensão do seu pensamento. Experimente usar cores diferentes para categorizar ideias e mantenha um quadro visível para acompanhamento. Estudos sugerem que essa prática pode aumentar a produtividade em até 20%.",
-      "author": "Amelia Anderson",
-      "authorRole": "Lead Developer",
-      "authorBio": "Amelia é uma desenvolvedora experiente com mais de 10 anos na indústria, especializada em metodologias ágeis e design de interfaces.",
-      "authorImage": "https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80"
-    },
-    {
-      "id": 2,
-      "title": "Rotina matinal para melhorar seu humor",
-      "date": "25 Novembro 2020",
-      "images": [
-        "https://images.unsplash.com/photo-1544654803-b69140b285a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
-        "https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-      ],
-      "videos": [
-        "https://www.youtube.com/embed/XYZ123"
-      ],
-      "content": "Começar o dia com o pé direito pode impactar significativamente seu humor e produtividade. Inclua 10 minutos de meditação para clarear a mente, seguidos por um café da manhã nutritivo. Exercícios leves, como alongamento, também ajudam a liberar endorfinas, enquanto evitar o celular nas primeiras horas permite focar em você. Adotar uma rotina matinal consistente pode transformar seus dias, e estudos mostram que isso reduz o estresse em até 30% quando seguido regularmente. Ajuste essas sugestões ao seu estilo de vida para melhores resultados.",
-      "author": "Amelia Anderson",
-      "authorRole": "Lead Developer",
-      "authorBio": "Amelia é apaixonada por produtividade e bem-estar, combinando sua experiência em tecnologia com práticas de vida saudável.",
-      "authorImage": "https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80"
-    },
-    {
-      "id": 3,
-      "title": "Todos os recursos que você deseja conhecer",
-      "date": "30 Setembro 2020",
-      "images": [
-        "https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1547&q=80",
-        "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-      ],
-      "videos": [
-        "https://www.youtube.com/embed/ABC789"
-      ],
-      "content": "Explore uma lista abrangente de recursos que podem elevar seu trabalho e aprendizado. Ferramentas como Trello para gestão de projetos e Notion para anotações são indispensáveis, enquanto plataformas como Coursera oferecem cursos de alta qualidade. Um bom editor de texto, como VS Code, também é essencial. Integrar esses recursos ao seu dia a dia pode aumentar sua eficiência. Muitas dessas ferramentas oferecem versões gratuitas com funcionalidades robustas, então experimente e escolha as que melhor se adaptam às suas necessidades.",
-      "author": "Amelia Anderson",
-      "authorRole": "Lead Developer",
-      "authorBio": "Amelia tem um histórico em desenvolvimento de software e é reconhecida por suas recomendações de ferramentas inovadoras.",
-      "authorImage": "https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80"
-    }
-  ]
+  {
+    "id": 1,
+    "title": "Como usar notas adesivas para resolução de problemas",
+    "date": "20 Outubro 2019",
+    "images": [
+      "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1526491109672-74740652b963?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "https://www.youtube.com/embed/1Z4bE0Q5i1o"
+    ],
+    "content": "As notas adesivas são ferramentas simples, mas poderosas, que podem transformar a forma como abordamos a resolução de problemas. No ambiente de trabalho, elas ajudam a organizar ideias durante brainstormings, permitindo que equipes visualizem e priorizem tarefas, como no método Kanban, onde cada nota representa uma tarefa. Além disso, são úteis em casa para planejar projetos pessoais ou estudar, pois podem ser reorganizadas facilmente. Com criatividade e organização, elas se tornam uma extensão do seu pensamento. Experimente usar cores diferentes para categorizar ideias e mantenha um quadro visível para acompanhamento. Estudos sugerem que essa prática pode aumentar a produtividade em até 20%.",
+    "author": "Amelia Anderson",
+    "authorRole": "Lead Developer",
+    "authorBio": "Amelia é uma desenvolvedora experiente com mais de 10 anos na indústria, especializada em metodologias ágeis e design de interfaces.",
+    "authorImage": "https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80"
+  },
+  {
+    "id": 2,
+    "title": "Rotina matinal para melhorar seu humor",
+    "date": "25 Novembro 2020",
+    "images": [
+      "https://images.unsplash.com/photo-1544654803-b69140b285a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/XYZ123"
+    ],
+    "content": "Começar o dia com o pé direito pode impactar significativamente seu humor e produtividade. Inclua 10 minutos de meditação para clarear a mente, seguidos por um café da manhã nutritivo. Exercícios leves, como alongamento, também ajudam a liberar endorfinas, enquanto evitar o celular nas primeiras horas permite focar em você. Adotar uma rotina matinal consistente pode transformar seus dias, e estudos mostram que isso reduz o estresse em até 30% quando seguido regularmente. Ajuste essas sugestões ao seu estilo de vida para melhores resultados.",
+    "author": "Amelia Anderson",
+    "authorRole": "Lead Developer",
+    "authorBio": "Amelia é apaixonada por produtividade e bem-estar, combinando sua experiência em tecnologia com práticas de vida saudável.",
+    "authorImage": "https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80"
+  },
+  {
+    "id": 3,
+    "title": "Todos os recursos que você deseja conhecer",
+    "date": "30 Setembro 2020",
+    "images": [
+      "https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1547&q=80",
+      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/ABC789"
+    ],
+    "content": "Explore uma lista abrangente de recursos que podem elevar seu trabalho e aprendizado. Ferramentas como Trello para gestão de projetos e Notion para anotações são indispensáveis, enquanto plataformas como Coursera oferecem cursos de alta qualidade. Um bom editor de texto, como VS Code, também é essencial. Integrar esses recursos ao seu dia a dia pode aumentar sua eficiência. Muitas dessas ferramentas oferecem versões gratuitas com funcionalidades robustas, então experimente e escolha as que melhor se adaptam às suas necessidades.",
+    "author": "Amelia Anderson",
+    "authorRole": "Lead Developer",
+    "authorBio": "Amelia tem um histórico em desenvolvimento de software e é reconhecida por suas recomendações de ferramentas inovadoras.",
+    "authorImage": "https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80"
+  }
+]

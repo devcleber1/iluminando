@@ -1,16 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import 'tailwindcss/tailwind.css';
-import postsData from './blog.json'; 
-
-const normalizeTitle = (title) => {
-  return title
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/-+/g, '-')
-    .replace(/^-|-$/g, '');
-};
+import postsData from './blog.json';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -46,16 +38,16 @@ const BlogList = () => {
                 animate="visible"
                 variants={fadeInUp}
               >
-                <Link to={`/blog/${normalizeTitle(post.title)}`}>
+                <Link to={`/blog/${post.id}`}>
                   <motion.img
-                    src={post.images[0]} // Usa a primeira imagem como capa
+                    src={post.images[0]}
                     alt={post.title}
                     className="w-full max-w-xs h-48 object-cover rounded-lg shadow-lg cursor-pointer sm:max-w-sm md:max-w-md"
                     whileHover={{ scale: 1.05 }}
                   />
                 </Link>
                 <Link
-                  to={`/blog/${normalizeTitle(post.title)}`}
+                  to={`/blog/${post.id}`}
                   className="mt-2 text-xl font-title text-yellow-500 font-semibold hover:underline sm:text-lg"
                 >
                   {post.title}
@@ -75,19 +67,30 @@ const BlogList = () => {
 const BlogPost = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const post = postsData.find((p) => normalizeTitle(p.title) === id);
+  const post = postsData.find((p) => String(p.id) === id);
 
   if (!post) {
     return (
       <main className="font-body text-gray-800">
         <section className="bg-white py-20 px-6 text-center">
           <p className="text-lg font-body text-gray-700">Post não encontrado</p>
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-2 mt-4 font-menu font-semibold text-yellow-500 hover:text-yellow-600 transition-colors duration-300"
+          >
+            Voltar para o Blog
+            <motion.span
+              className="group-hover:translate-x-1 transition-transform duration-300"
+            >
+              ➜
+            </motion.span>
+          </Link>
         </section>
       </main>
     );
   }
 
-  const otherPosts = postsData.filter(p => normalizeTitle(p.title) !== id);
+  const otherPosts = postsData.filter((p) => String(p.id) !== id);
 
   return (
     <main className="font-body text-gray-800">
@@ -114,7 +117,7 @@ const BlogPost = () => {
               </motion.button>
               <motion.img
                 className="object-cover w-full h-64 sm:h-80 md:h-96 rounded-xl shadow-lg"
-                src={post.images[0]} // Primeira imagem como capa
+                src={post.images[0]}
                 alt={post.title}
                 whileHover={{ scale: 1.05 }}
               />
@@ -181,7 +184,7 @@ const BlogPost = () => {
                     transition={{ delay: index * 0.1 }}
                   >
                     <Link
-                      to={`/blog/${normalizeTitle(otherPost.title)}`}
+                      to={`/blog/${otherPost.id}`}
                       className="block text-yellow-500 font-body text-sm sm:text-base hover:text-yellow-600 flex items-center gap-2 transition-colors duration-200"
                     >
                       {otherPost.title}
@@ -207,10 +210,15 @@ const BlogPost = () => {
 };
 
 const BlogApp = () => {
+  const { id } = useParams();
   const location = useLocation();
-  const isBlogPost = location.pathname.includes('/blog/') && location.pathname !== '/blog';
 
-  return <>{isBlogPost ? <BlogPost /> : <BlogList />}</>;
+  // Rolar para o topo quando a rota mudar
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]); // Dispara quando a rota mudar
+
+  return <>{id ? <BlogPost /> : <BlogList />}</>;
 };
 
 export default BlogApp;
