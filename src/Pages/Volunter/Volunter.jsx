@@ -180,7 +180,23 @@ export default function Volunteer() {
 
             <button
               type="submit"
-              className="w-full py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500 transition-colors duration-200 sm:text-sm md:text-base"
+              className="w-full 
+              py-3 
+              bg-yellow-400 
+              text-black 
+              font-semibold  
+                bg-gradient-to-r
+                from-yellow-400
+                to-yellow-500
+                shadow-lg
+                hover:from-yellow-500
+                hover:to-yellow-600
+                hover:scale-105 
+                transition-colors 
+                duration-200 
+                sm:text-sm 
+                md:text-base
+                text-white"
             >
               Enviar Cadastro
             </button>

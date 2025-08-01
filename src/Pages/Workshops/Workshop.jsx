@@ -2,12 +2,15 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowRight, Book, Calculator } from 'lucide-react';
+import { ArrowRight, Book, Calculator, Volleyball, Baby, Award } from 'lucide-react';
 import workshopsData from './workshops';
 
 const iconMap = {
   Calculator,
   Book,
+  Volleyball,
+  Baby,
+  Award
 };
 
 export default function Workshops() {
@@ -155,7 +158,7 @@ export default function Workshops() {
         </section>
       ) : (
         <section className="py-20 px-6 max-w-7xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {workshops.map(({ id, title, icon: Icon, images, description }) => (
+          {workshops.map(({ id, title, icon: Icon, images, description, studentsInfo }) => (
             <motion.div
               key={id}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200 flex flex-col"
@@ -178,7 +181,8 @@ export default function Workshops() {
                   </h3>
                 </div>
                 <p className="text-gray-700 flex-grow">{description}</p>
-                <div className="border-t border-gray-200 pt-4 mt-6 flex items-center justify-end">
+                <div className="border-t border-gray-200 pt-4 mt-6 flex items-center justify-between">
+                  <span className="text-red-500 font-menu font-semibold">{studentsInfo}</span>
                   <Link
                     to={`/oficinas/${id}`}
                     className="flex items-center text-yellow-500 font-menu font-semibold hover:text-yellow-600 focus:outline-none transition duration-300 ease-in-out"

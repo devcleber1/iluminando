@@ -26,7 +26,7 @@ export default function QuemSomos() {
   return (
     <main className="font-body text-gray-800">
       <section className="bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-300 py-20 mt-30">
-      <motion.h1
+        <motion.h1
           className="text-5xl font-title font-bold text-white text-center cursor-default select-none"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -48,7 +48,7 @@ export default function QuemSomos() {
           transition={{ duration: 1.2 }}
         >
           <p className="text-lg font-body leading-relaxed text-gray-700">
-          Iluminando o Futuro é uma organização dedicada ao desenvolvimento
+            Iluminando o Futuro é uma organização dedicada ao desenvolvimento
             social e à transformação de vidas. Acreditamos no poder do
             conhecimento para mudar realidades e construir um futuro mais
             brilhante.
@@ -136,7 +136,7 @@ export default function QuemSomos() {
                     className={`w-full md:w-1/2 flex flex-col items-center text-center px-4`}
                     variants={timelineChildVariants}
                   >
-                    <h4 className="text-xl font-title text-black font-semibold mb-2">{ano}</h4>
+                    <h4 className="text-xl font-title text-white font-semibold mb-2">{ano}</h4>
                     <p className="text-black text-base font-body max-w-md">{evento}</p>
                   </motion.div>
 
@@ -167,15 +167,30 @@ export default function QuemSomos() {
 
       <section className="bg-white py-20 px-6 text-center">
         <motion.h2
-          className="text-4xl font-title font-bold mb-6 bg-gradient-to-r from-yellow-500 to-yellow-700 bg-clip-text text-transparent"
-          initial={{ opacity: 0, y: 20 }}
+          className="text-4xl font-title font-bold mb-6 text-yellow-500"
           animate={{ opacity: 1, y: 0 }}
         >
-          Precisamos do seu apoio!
+          Precisamos do seu Apoio!
         </motion.h2>
         <motion.a
-          href="#doar"
-          className="inline-block px-6 py-4 rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-700 text-white font-menu font-semibold text-lg shadow-lg"
+          href="/doacoes"
+          className="inline-block px-6 py-4 rounded-lg
+                bg-gradient-to-r
+                from-yellow-400
+                to-yellow-500
+                shadow-lg
+                hover:from-yellow-500
+                hover:to-yellow-600
+                hover:scale-105
+                active:scale-95
+                transition
+                duration-300
+                ease-in-out
+                cursor-pointer
+                select-none
+                text-white 
+                font-menu
+                text-lg"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
