@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import imgMissao from '../../assets/quadro.jpg';
 import imgVisao from '../../assets/doacao.jpg';
 import imgValores from '../../assets/quadrilha.jpg';
+import ilumina from '../../assets/ilumina.webp';
+import videoEntrevista from '../../video/entrevista.mp4';
 
 export default function QuemSomos() {
   const fadeInUp = {
@@ -60,6 +62,32 @@ export default function QuemSomos() {
             desenvolverem novas habilidades, aumentar sua autoestima e
             conquistar seus objetivos.
           </p>
+        </motion.div>
+      </section>
+
+      <section className="bg-white py-20 px-6">
+        <motion.h2
+          className="text-4xl font-title font-bold text-yellow-500 text-center mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Conheça Nossa História: Uma Entrevista Inspiradora
+        </motion.h2>
+        <motion.div
+          className="max-w-4xl mx-auto"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <video
+            src={videoEntrevista}
+            controls
+            className="w-full aspect-video h-80 sm:h-96 md:h-[500px] rounded-lg shadow-lg object-cover"
+            poster={ilumina}
+          >
+            Desculpe, seu navegador não suporta a reprodução de vídeos.
+          </video>
         </motion.div>
       </section>
 
