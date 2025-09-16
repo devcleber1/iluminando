@@ -74,7 +74,7 @@ const About = () => {
               Descubra histórias inspiradoras de superação e inovação. Junte-se a nós nessa jornada e ajude a criar um mundo mais justo!
             </p>
             <button
-              onClick={() => window.location.href = '#sobre'}
+              onClick={() => window.location.href = '/sobre'}
               className="text-black font-semibold flex text-[20px] items-center justify-center hover:text-yellow-400 active:text-yellow-600 transition-colors duration-300 font-body"
               aria-label="Saiba Mais"
               onMouseEnter={e => {

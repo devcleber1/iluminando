@@ -4,6 +4,13 @@ import imgMissao from '../../assets/quadro.jpg';
 import imgVisao from '../../assets/doacao.jpg';
 import imgValores from '../../assets/quadrilha.jpg';
 import ilumina from '../../assets/ilumina.webp';
+import natalsolid from '../../assets/natalsolid.jpg'
+import festaj23 from '../../assets/festajunina23.jpg'
+import oficina from '../../assets/oficina.webp'
+import quadrilha from '../../Pages/Gallery/Assets/quadrilha2.jpeg'
+import natal from  '../../assets/natal.webp'
+import bale from '../../assets/bale.jpg'
+import quadrilha25 from '../../assets/quadrilha.jpg'
 import videoEntrevista from '../../video/entrevista.mp4';
 
 export default function QuemSomos() {
@@ -18,11 +25,14 @@ export default function QuemSomos() {
   };
 
   const timelineItems = [
-    { ano: '2015', evento: 'Fundado o Instituto Iluminando o Futuro.', img: imgMissao },
-    { ano: '2016', evento: 'Início das primeiras oficinas de balé e reforço escolar.', img: imgVisao },
-    { ano: '2018', evento: 'Criação do projeto Natal Solidário.', img: imgValores },
-    { ano: '2020', evento: 'Ações de apoio durante a pandemia.', img: imgMissao },
-    { ano: '2023', evento: 'Ampliação dos projetos para novas comunidades.', img: imgVisao },
+    { ano: '2023', evento: 'Início do projeto Iluminando o Futuro.', img: festaj23 },
+    { ano: '2023', evento: 'Início do projeto Natal Solidário.', img: natalsolid },
+    { ano: '2024', evento: 'Fundação do Instituto Iluminando o Futuro.', img: ilumina },
+    { ano: '2024', evento: 'Arraiá Iluminando o Futuro – Ano 2', img: quadrilha },
+    { ano: '2024', evento: 'Abertura Oficial das Oficinas – Plantando Saberes', img: oficina },
+    { ano: '2024', evento: 'Natal Solidário Iluminando o Futuro II.', img: natal },
+    { ano: '2025', evento: 'Nasce o Balé Iluminando o Futuro', img: bale },
+    { ano: '2025', evento: 'Arraiá Iluminando o Futuro – Ano 3', img: quadrilha25 },
   ];
 
   return (
