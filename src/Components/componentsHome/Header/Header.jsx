@@ -53,9 +53,15 @@ export default function Header() {
               to={item.href}
               style={isHome ? navLinkTextShadow : {}}
               className={`text-base font-bold transition-colors duration-200 whitespace-nowrap ${
-                isHome ? 'text-gray-200 hover:text-yellow-400' : 'text-black hover:text-yellow-400'
+                isHome
+                  ? location.pathname === item.href
+                    ? 'text-yellow-400' // Cor ativa para a homepage
+                    : 'text-gray-200 hover:text-yellow-400'
+                  : location.pathname === item.href
+                    ? 'text-yellow-400' // Cor ativa para outras páginas
+                    : 'text-black hover:text-yellow-400'
               }`}
-              aria-label={item.name} // aria-label com o mesmo nome visível
+              aria-label={item.name}
             >
               {item.name}
             </Link>
@@ -66,7 +72,11 @@ export default function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end font-menu">
           <Link
             to="/doacoes"
-            className="rounded-md bg-transparent border border-yellow-400 px-3.5 py-2.5 text-sm font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-white transition-colors duration-200"
+            className={`rounded-md bg-transparent border border-yellow-400 px-3.5 py-2.5 text-sm font-semibold transition-colors duration-200 ${
+              location.pathname === '/doacoes'
+                ? 'text-white bg-yellow-400' // Cor ativa para o botão "Quero Doar"
+                : 'text-yellow-400 hover:bg-yellow-400 hover:text-white'
+            }`}
             aria-label="Quero Doar"
           >
             Quero Doar
@@ -112,7 +122,11 @@ export default function Header() {
                     key={item.name}
                     to={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className=" -mx-3 block rounded-lg px-3 py-2 text-lg font-bold text-black hover:text-yellow-400 transition-colors duration-200 focus:outline-none"
+                    className={`-mx-3 block rounded-lg px-3 py-2 text-lg font-bold transition-colors duration-200 focus:outline-none ${
+                      location.pathname === item.href
+                        ? 'text-yellow-400' // Cor ativa no menu mobile
+                        : 'text-black hover:text-yellow-400'
+                    }`}
                     aria-label={item.name}
                   >
                     {item.name}
@@ -121,7 +135,11 @@ export default function Header() {
                 <Link
                   to="/doacoes"
                   onClick={() => setMobileMenuOpen(false)}
-                  className=" -mx-3 block rounded-md bg-yellow-400 px-3.5 py-2 text-lg font-semibold text-white hover:bg-yellow-500 transition-colors duration-200 focus:outline-none mt-4 text-center"
+                  className={`-mx-3 block rounded-md px-3.5 py-2 text-lg font-semibold transition-colors duration-200 focus:outline-none mt-4 text-center ${
+                    location.pathname === '/doacoes'
+                      ? 'bg-yellow-500 text-white' // Cor ativa para o botão "Quero Doar" no mobile
+                      : 'bg-yellow-400 text-white hover:bg-yellow-500'
+                  }`}
                   aria-label="Quero Doar"
                 >
                   Quero Doar
