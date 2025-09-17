@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, memo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import LoadingComponent from '../../Loading'
 
@@ -30,7 +30,7 @@ const textShadowStyleParagraph = {
   `,
 }
 
-export default function Hero() {
+const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
   const navigate = useNavigate()
@@ -43,20 +43,22 @@ export default function Hero() {
   }, [])
 
   const handleClick = (path) => {
+    if (isLoading) return
     setIsLoading(true)
     setTimeout(() => {
       setIsLoading(false)
       navigate(path)
-    }, 2000) // 2 segundos para consistência com outros componentes
+    }, 1000) // Reduced for better UX
   }
 
   return (
     <>
       {isLoading && <LoadingComponent />}
       <div className="bg-white font-body w-screen overflow-x-hidden">
-        {/* Preload imagens */}
+        {/* Preload images with priority for first image */}
+        <link rel="preload" href={carouselImages[0].src} as="image" />
         <div className="hidden">
-          {carouselImages.map((image, index) => (
+          {carouselImages.slice(1).map((image, index) => (
             <img key={index} src={image.src} alt={image.alt} loading="lazy" />
           ))}
         </div>
@@ -69,22 +71,26 @@ export default function Hero() {
                 key={index}
                 src={image.src}
                 alt={image.alt}
-                loading="lazy"
+                loading={index === 0 ? 'eager' : 'lazy'}
+                decoding="async"
                 className={`absolute top-0 left-0 w-full h-full max-w-none object-cover object-center transition-opacity duration-1000 ease-in-out ${
                   index === currentImage ? 'opacity-100' : 'opacity-0'
                 }`}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw" // Responsive sizes
               />
             ))}
             <div className="absolute inset-0 bg-black opacity-50" />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2" role="tablist" aria-label="Controles do carrossel">
               {carouselImages.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentImage(index)}
                   className={`w-3 h-3 rounded-full ${
                     index === currentImage ? 'bg-yellow-400' : 'bg-white/50 hover:bg-white/80'
-                  } transition-colors duration-200`}
+                  } transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500`}
                   aria-label={`Ir para o banner ${index + 1}`}
+                  aria-selected={index === currentImage}
+                  role="tab"
                 />
               ))}
             </div>
@@ -102,15 +108,17 @@ export default function Hero() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <button
                 onClick={() => handleClick('/doacoes')}
-                className="font-menu rounded-md bg-transparent border border-yellow-400 px-3.5 py-2.5 text-sm font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-white transition-colors duration-200"
+                className="font-menu rounded-md bg-transparent border border-yellow-400 px-3.5 py-2.5 text-sm font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500 disabled:opacity-50"
                 aria-label="Fazer Doação"
+                disabled={isLoading}
               >
                 Fazer Doação
               </button>
               <button
                 onClick={() => handleClick('/voluntario')}
-                className="font-menu rounded-md bg-transparent border border-yellow-400 px-3.5 py-2.5 text-sm font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-white transition-colors duration-200"
+                className="font-menu rounded-md bg-transparent border border-yellow-400 px-3.5 py-2.5 text-sm font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500 disabled:opacity-50"
                 aria-label="Venha Fazer Parte"
+                disabled={isLoading}
               >
                 Venha Fazer Parte
               </button>
@@ -121,3 +129,5 @@ export default function Hero() {
     </>
   )
 }
+
+export default memo(Hero)

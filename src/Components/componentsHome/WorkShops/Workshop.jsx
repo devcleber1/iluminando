@@ -1,24 +1,79 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import LoadingComponent from '../../Loading';
 import workshops from './data'; // Certifique-se de que o caminho está correto
 
-export default function WorkshopsSection() {
+const WorkshopCard = memo(({ workshop, handleLinkClick, isLoading }) => (
+  <motion.div
+    className="group transform transition duration-300 rounded-lg bg-white shadow-md hover:shadow-2xl hover:scale-[1.03]"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    viewport={{ once: true }}
+  >
+    <div className="w-full aspect-[4/3] mb-6 overflow-hidden rounded-lg shadow-sm">
+      <img
+        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        src={workshop.img}
+        alt={workshop.alt}
+        loading="lazy"
+        decoding="async"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      />
+    </div>
+    <div className="px-4 pb-6 text-center">
+      <h5 className="mb-2 text-[clamp(1.25rem,2.5vw,1.75rem)] font-title font-bold leading-none text-gray-900">
+        {workshop.title}
+      </h5>
+      <p className="text-[clamp(1rem,2vw,1.25rem)] text-gray-700 mb-4">
+        {workshop.desc}
+      </p>
+      <motion.button
+        onClick={() => handleLinkClick(`/oficinas/${workshop.id}`)}
+        whileHover={{ scale: isLoading ? 1 : 1.05 }}
+        className="
+          inline-flex
+          items-center
+          gap-2
+          font-menu
+          font-semibold
+          text-yellow-500
+          hover:text-yellow-600
+          transition-colors
+          duration-300
+          group
+          disabled:opacity-50
+          disabled:cursor-not-allowed
+          focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500
+        "
+        aria-label={`Saiba mais sobre a oficina ${workshop.title}`}
+        disabled={isLoading}
+      >
+        Saiba mais
+        <motion.span
+          className="group-hover:translate-x-1 transition-transform duration-300"
+        >
+          <ArrowRight size={18} aria-hidden="true" />
+        </motion.span>
+      </motion.button>
+    </div>
+  </motion.div>
+));
+
+const WorkshopsSection = () => {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleLinkClick = (path) => {
-    // Evitar múltiplos cliques enquanto já está carregando
     if (isLoading) return;
-
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
       navigate(path);
-      window.scrollTo(0, 0); // Forçar scroll para o topo após navegação
-    }, 2000); // 2 segundos para consistência com outros componentes
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 1000); // Reduced for better UX
   };
 
   return (
@@ -38,58 +93,13 @@ export default function WorkshopsSection() {
         </div>
 
         <div className="grid gap-6 row-gap-10 lg:grid-cols-3">
-          {workshops.map((workshop, idx) => (
-            <motion.div
-              key={workshop.id} // Usando workshop.id para unicidade
-              className="group transform transition duration-300 rounded-lg bg-white shadow-md hover:shadow-2xl hover:scale-[1.03]"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-full aspect-[4/3] mb-6 overflow-hidden rounded-lg shadow-sm">
-                <img
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  src={workshop.img}
-                  alt={workshop.alt}
-                />
-              </div>
-              <div className="px-4 pb-6 text-center">
-                <h5 className="mb-2 text-[clamp(1.25rem,2.5vw,1.75rem)] font-title font-bold leading-none text-gray-900">
-                  {workshop.title}
-                </h5>
-                <p className="text-[clamp(1rem,2vw,1.25rem)] text-gray-700 mb-4">
-                  {workshop.desc}
-                </p>
-                <motion.button
-                  onClick={() => handleLinkClick(`/oficinas/${workshop.id}`)}
-                  whileHover={{ scale: isLoading ? 1 : 1.05 }}
-                  className="
-                    inline-flex
-                    items-center
-                    gap-2
-                    font-menu
-                    font-semibold
-                    text-yellow-500
-                    hover:text-yellow-600
-                    transition-colors
-                    duration-300
-                    group
-                    disabled:opacity-50
-                    disabled:cursor-not-allowed
-                  "
-                  aria-label={`Saiba mais sobre a oficina ${workshop.title}`}
-                  disabled={isLoading}
-                >
-                  Saiba mais
-                  <motion.span
-                    className="group-hover:translate-x-1 transition-transform duration-300"
-                  >
-                    <ArrowRight size={18} />
-                  </motion.span>
-                </motion.button>
-              </div>
-            </motion.div>
+          {workshops.map((workshop) => (
+            <WorkshopCard
+              key={workshop.id}
+              workshop={workshop}
+              handleLinkClick={handleLinkClick}
+              isLoading={isLoading}
+            />
           ))}
         </div>
 
@@ -122,6 +132,7 @@ export default function WorkshopsSection() {
               mx-auto
               disabled:opacity-50
               disabled:cursor-not-allowed
+              focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500
             "
             aria-label="Ver todas as oficinas"
             disabled={isLoading}
@@ -132,4 +143,6 @@ export default function WorkshopsSection() {
       </section>
     </>
   );
-}
+};
+
+export default memo(WorkshopsSection);

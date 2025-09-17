@@ -1,41 +1,54 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
-import 'tailwindcss/tailwind.css';
+import { Helmet } from 'react-helmet-async';
 
-export default function Volunteer() {
+const Volunteer = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors, isSubmitting },
   } = useForm();
 
   const onSubmit = (data) => {
-    const message =
-      `Olá! Quero me cadastrar como voluntário.%0A%0A` +
+    const message = `Olá! Quero me cadastrar como voluntário.%0A%0A` +
       `*Nome:* ${data.name}%0A` +
       `*E-mail:* ${data.email}%0A` +
       `*Telefone:* ${data.phone}%0A` +
       `*Área de Interesse:* ${data.area}%0A` +
       `*Disponibilidade:* ${data.availability}%0A` +
       `*Experiência Prévia:* ${data.experience || 'Não informado'}`;
-
     const phoneNumber = '5521968828026';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
     window.open(whatsappUrl, '_blank');
   };
 
   return (
     <div className="min-h-screen box-border">
-      {/* Hero Section */}
+      <Helmet>
+        <title>Seja Voluntário - Iluminando o Futuro</title>
+        <meta
+          name="description"
+          content="Junte-se ao Iluminando o Futuro como voluntário e faça parte da transformação de vidas através da educação, cultura e esporte."
+        />
+        <meta property="og:title" content="Seja Voluntário - Iluminando o Futuro" />
+        <meta
+          property="og:description"
+          content="Junte-se ao Iluminando o Futuro como voluntário e faça parte da transformação de vidas através da educação, cultura e esporte."
+        />
+        <meta property="og:image" content="https://seusite.com/assets/iluminando.png" />
+        <meta property="og:url" content="https://seusite.com/voluntario" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
       <section className="relative h-[40vh] sm:h-[35vh] md:h-[40vh] flex items-center px-4">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&q=80"
             alt="Voluntários em ação, colaborando com causas sociais"
-            title="Voluntários em ação"
             className="w-full h-full object-cover"
+            loading="eager"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50" />
         </div>
@@ -49,7 +62,6 @@ export default function Volunteer() {
         </div>
       </section>
 
-      {/* Form Section */}
       <section className="py-20 px-6 sm:px-4 md:px-6">
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8 sm:p-6 md:p-8">
           <h2 className="text-2xl font-title font-bold mb-6 sm:text-xl md:text-2xl">
@@ -66,7 +78,25 @@ export default function Volunteer() {
                   type="text"
                   {...register('name', { required: 'Nome é obrigatório' })}
                   aria-describedby="name-error"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-yellow-500 focus:ring-2 focus:ring-yellow-400 text-gray-700 transition-all duration-200 sm:text-sm md:text-base"
+                  className="
+                    w-full
+                    px-4
+                    py-2
+                    border
+                    border-gray-300
+                    rounded-lg
+                    focus:border-yellow-500
+                    focus:ring-2
+                    focus:ring-yellow-400
+                    text-gray-700
+                    transition-all
+                    duration-200
+                    sm:text-sm
+                    md:text-base
+                    disabled:opacity-50
+                    disabled:cursor-not-allowed
+                  "
+                  disabled={isSubmitting}
                 />
                 {errors.name && (
                   <p id="name-error" className="text-sm text-red-600 mt-1">
@@ -74,7 +104,6 @@ export default function Volunteer() {
                   </p>
                 )}
               </div>
-
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                   E-mail
@@ -86,11 +115,29 @@ export default function Volunteer() {
                     required: 'E-mail é obrigatório',
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: 'E-mail inválido'
-                    }
+                      message: 'E-mail inválido',
+                    },
                   })}
                   aria-describedby="email-error"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-yellow-500 focus:ring-2 focus:ring-yellow-400 text-gray-700 transition-all duration-200 sm:text-sm md:text-base"
+                  className="
+                    w-full
+                    px-4
+                    py-2
+                    border
+                    border-gray-300
+                    rounded-lg
+                    focus:border-yellow-500
+                    focus:ring-2
+                    focus:ring-yellow-400
+                    text-gray-700
+                    transition-all
+                    duration-200
+                    sm:text-sm
+                    md:text-base
+                    disabled:opacity-50
+                    disabled:cursor-not-allowed
+                  "
+                  disabled={isSubmitting}
                 />
                 {errors.email && (
                   <p id="email-error" className="text-sm text-red-600 mt-1">
@@ -98,7 +145,6 @@ export default function Volunteer() {
                   </p>
                 )}
               </div>
-
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                   Telefone
@@ -108,7 +154,25 @@ export default function Volunteer() {
                   type="tel"
                   {...register('phone', { required: 'Telefone é obrigatório' })}
                   aria-describedby="phone-error"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-yellow-500 focus:ring-2 focus:ring-yellow-400 text-gray-700 transition-all duration-200 sm:text-sm md:text-base"
+                  className="
+                    w-full
+                    px-4
+                    py-2
+                    border
+                    border-gray-300
+                    rounded-lg
+                    focus:border-yellow-500
+                    focus:ring-2
+                    focus:ring-yellow-400
+                    text-gray-700
+                    transition-all
+                    duration-200
+                    sm:text-sm
+                    md:text-base
+                    disabled:opacity-50
+                    disabled:cursor-not-allowed
+                  "
+                  disabled={isSubmitting}
                 />
                 {errors.phone && (
                   <p id="phone-error" className="text-sm text-red-600 mt-1">
@@ -116,7 +180,6 @@ export default function Volunteer() {
                   </p>
                 )}
               </div>
-
               <div>
                 <label htmlFor="area" className="block text-sm font-medium text-gray-700">
                   Área de Interesse
@@ -125,7 +188,25 @@ export default function Volunteer() {
                   id="area"
                   {...register('area', { required: 'Área é obrigatória' })}
                   aria-describedby="area-error"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-yellow-500 focus:ring-2 focus:ring-yellow-400 text-gray-700 transition-all duration-200 sm:text-sm md:text-base"
+                  className="
+                    w-full
+                    px-4
+                    py-2
+                    border
+                    border-gray-300
+                    rounded-lg
+                    focus:border-yellow-500
+                    focus:ring-2
+                    focus:ring-yellow-400
+                    text-gray-700
+                    transition-all
+                    duration-200
+                    sm:text-sm
+                    md:text-base
+                    disabled:opacity-50
+                    disabled:cursor-not-allowed
+                  "
+                  disabled={isSubmitting}
                 >
                   <option value="">Selecione uma área</option>
                   <option value="educacao">Educação</option>
@@ -140,7 +221,6 @@ export default function Volunteer() {
                   </p>
                 )}
               </div>
-
               <div>
                 <label htmlFor="availability" className="block text-sm font-medium text-gray-700">
                   Disponibilidade
@@ -149,7 +229,25 @@ export default function Volunteer() {
                   id="availability"
                   {...register('availability', { required: 'Disponibilidade é obrigatória' })}
                   aria-describedby="availability-error"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-yellow-500 focus:ring-2 focus:ring-yellow-400 text-gray-700 transition-all duration-200 sm:text-sm md:text-base"
+                  className="
+                    w-full
+                    px-4
+                    py-2
+                    border
+                    border-gray-300
+                    rounded-lg
+                    focus:border-yellow-500
+                    focus:ring-2
+                    focus:ring-yellow-400
+                    text-gray-700
+                    transition-all
+                    duration-200
+                    sm:text-sm
+                    md:text-base
+                    disabled:opacity-50
+                    disabled:cursor-not-allowed
+                  "
+                  disabled={isSubmitting}
                 >
                   <option value="">Selecione sua disponibilidade</option>
                   <option value="manha">Manhã</option>
@@ -163,7 +261,6 @@ export default function Volunteer() {
                   </p>
                 )}
               </div>
-
               <div>
                 <label htmlFor="experience" className="block text-sm font-medium text-gray-700">
                   Experiência Prévia
@@ -173,36 +270,83 @@ export default function Volunteer() {
                   {...register('experience')}
                   rows={4}
                   placeholder="Conte-nos sobre suas experiências anteriores como voluntário (opcional)"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-yellow-500 focus:ring-2 focus:ring-yellow-400 text-gray-700 transition-all duration-200 sm:text-sm md:text-base"
+                  className="
+                    w-full
+                    px-4
+                    py-2
+                    border
+                    border-gray-300
+                    rounded-lg
+                    focus:border-yellow-500
+                    focus:ring-2
+                    focus:ring-yellow-400
+                    text-gray-700
+                    transition-all
+                    duration-200
+                    sm:text-sm
+                    md:text-base
+                    disabled:opacity-50
+                    disabled:cursor-not-allowed
+                  "
+                  disabled={isSubmitting}
                 />
               </div>
             </div>
-
-            <button
+            <motion.button
               type="submit"
-              className="w-full 
-              py-3 
-              bg-yellow-400 
-              text-black 
-              font-semibold  
+              className="
+                w-full
+                py-3
                 bg-gradient-to-r
                 from-yellow-400
                 to-yellow-500
-                shadow-lg
+                text-white
+                font-semibold
+                rounded-lg
                 hover:from-yellow-500
                 hover:to-yellow-600
-                hover:scale-105 
-                transition-colors 
-                duration-200 
-                sm:text-sm 
+                focus-visible:outline
+                focus-visible:outline-2
+                focus-visible:outline-offset-2
+                focus-visible:outline-yellow-500
+                transition-all
+                duration-200
+                sm:text-sm
                 md:text-base
-                text-white"
+                disabled:opacity-50
+                disabled:cursor-not-allowed
+              "
+              whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
+              whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
+              disabled={isSubmitting}
+              aria-label="Enviar cadastro de voluntário"
             >
-              Enviar Cadastro
-            </button>
+              {isSubmitting ? 'Enviando...' : 'Enviar Cadastro'}
+            </motion.button>
           </form>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'Seja Voluntário - Iluminando o Futuro',
+            description:
+              'Junte-se ao Iluminando o Futuro como voluntário e faça parte da transformação de vidas através da educação, cultura e esporte.',
+            url: 'https://seusite.com/voluntario',
+            publisher: {
+              '@type': 'Organization',
+              name: 'Iluminando o Futuro',
+              logo: { '@type': 'ImageObject', url: 'https://seusite.com/assets/iluminando.png' },
+            },
+          }),
+        }}
+      />
     </div>
   );
-}
+};
+
+export default memo(Volunteer);

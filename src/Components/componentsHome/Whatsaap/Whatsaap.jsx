@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 
-export default function WhatsAppButton() {
-  const phoneNumber = '+5521968828026'; // Número fornecido
+const WhatsAppButton = () => {
+  const phoneNumber = '+5521968828026';
   const message = encodeURIComponent('Olá, tenho interesse em conhecer mais sobre os projetos e oficinas do Iluminando o Futuro. Como posso participar?');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
@@ -33,9 +33,10 @@ export default function WhatsAppButton() {
         shadow-lg
         hover:from-yellow-500
         hover:to-yellow-600
-        focus:outline-none
-        focus:ring-2
-        focus:ring-yellow-300
+        focus-visible:outline
+        focus-visible:outline-2
+        focus-visible:outline-offset-2
+        focus-visible:outline-yellow-300
         transition
         duration-300
         ease-in-out
@@ -47,8 +48,10 @@ export default function WhatsAppButton() {
       whileTap={{ scale: 0.95 }}
       aria-label="Fale conosco pelo WhatsApp"
     >
-      <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
+      <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
       <span className="hidden sm:inline">Fale conosco</span>
     </motion.a>
   );
-}
+};
+
+export default memo(WhatsAppButton);

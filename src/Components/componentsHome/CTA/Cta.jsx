@@ -1,23 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import LoadingComponent from '../../Loading';
-import crianca from '../../../assets/educa.jpg'; // Caminho real da imagem
+import crianca from '../../../assets/educa.jpg';
 
-export default function HeroSejaDiferenca() {
+const HeroSejaDiferenca = () => {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleDoeAgoraClick = () => {
-    // Evitar múltiplos cliques enquanto já está carregando
     if (isLoading) return;
-
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
       navigate('/doacoes');
-      window.scrollTo(0, 0); // Forçar scroll para o topo após navegação
-    }, 2000); // 2 segundos para consistência com outros componentes
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 1000); // Reduced for better UX
   };
 
   return (
@@ -47,7 +45,6 @@ export default function HeroSejaDiferenca() {
                 esporte e cultura. Com o seu apoio, criamos oportunidades e
                 despertamos talentos todos os dias.
               </p>
-
               <motion.button
                 onClick={handleDoeAgoraClick}
                 whileHover={{ scale: isLoading ? 1 : 1.05 }}
@@ -76,6 +73,10 @@ export default function HeroSejaDiferenca() {
                   select-none
                   mx-auto
                   md:mx-0
+                  focus-visible:outline
+                  focus-visible:outline-2
+                  focus-visible:outline-offset-2
+                  focus-visible:outline-yellow-500
                   disabled:opacity-50
                   disabled:cursor-not-allowed
                 "
@@ -91,12 +92,41 @@ export default function HeroSejaDiferenca() {
           <div className="w-full md:w-1/2 min-h-[300px] md:min-h-full shadow-inner md:shadow-[inset_8px_0_30px_-10px_rgba(0,0,0,0.3)]">
             <img
               src={crianca}
-              alt="Criança"
+              alt="Criança participando de atividade educativa do Iluminando o Futuro"
               className="w-full h-full object-cover"
+              loading="eager"
+              decoding="async"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
             />
           </div>
         </section>
+
+        {/* JSON-LD for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebPage',
+              name: 'Seja um Agente de Mudança - Iluminando o Futuro',
+              description:
+                'Transforme a vida de crianças através da educação, esporte e cultura com o Iluminando o Futuro. Doe agora e faça a diferença!',
+              url: 'https://seusite.com/seja-diferenca',
+              image: crianca,
+              publisher: {
+                '@type': 'Organization',
+                name: 'Iluminando o Futuro',
+                logo: {
+                  '@type': 'ImageObject',
+                  url: 'https://seusite.com/assets/iluminando.png',
+                },
+              },
+            }),
+          }}
+        />
       </div>
     </>
   );
-}
+};
+
+export default memo(HeroSejaDiferenca);
