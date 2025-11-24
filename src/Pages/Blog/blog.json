@@ -1,54 +1,75 @@
 [
   {
     "id": 1,
-    "title": "Como usar notas adesivas para resolução de problemas",
-    "date": "20 Outubro 2019",
+    "title": "Educação Transformando Vidas",
+    "date": "2024-11-24",
+    "dateFormatted": "24 Novembro 2024",
     "images": [
-      "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1526491109672-74740652b963?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      "/educacao.jpg",
+      "/educa.jpg"
     ],
     "videos": [
       "https://www.youtube.com/embed/dQw4w9WgXcQ",
       "https://www.youtube.com/embed/1Z4bE0Q5i1o"
     ],
-    "content": "As notas adesivas são ferramentas simples, mas poderosas, que podem transformar a forma como abordamos a resolução de problemas. No ambiente de trabalho, elas ajudam a organizar ideias durante brainstormings, permitindo que equipes visualizem e priorizem tarefas, como no método Kanban, onde cada nota representa uma tarefa. Além disso, são úteis em casa para planejar projetos pessoais ou estudar, pois podem ser reorganizadas facilmente. Com criatividade e organização, elas se tornam uma extensão do seu pensamento. Experimente usar cores diferentes para categorizar ideias e mantenha um quadro visível para acompanhamento. Estudos sugerem que essa prática pode aumentar a produtividade em até 20%.",
-    "author": "Amelia Anderson",
-    "authorRole": "Lead Developer",
-    "authorBio": "Amelia é uma desenvolvedora experiente com mais de 10 anos na indústria, especializada em metodologias ágeis e design de interfaces.",
-    "authorImage": "https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80"
+    "content": "A educação é a ferramenta mais poderosa para transformar vidas e criar oportunidades. No projeto Iluminando o Futuro, acreditamos que toda criança e jovem merece acesso a uma educação de qualidade que desperte seu potencial. Através de programas estruturados de reforço escolar e alfabetização, temos visto mudanças significativas na vida de centenas de estudantes. Nossas atividades combinam metodologias inovadoras com apoio personalizado, garantindo que cada aluno encontre seu próprio caminho para o sucesso. A educação não é apenas sobre aprender conteúdo, mas sobre formar cidadãos conscientes, críticos e preparados para os desafios do mundo. Venha fazer parte dessa transformação!",
+    "author": "Iluminando o Futuro",
+    "authorRole": "Instituição Social",
+    "authorBio": "Dedicada a transformar vidas através da educação, cultura e esporte.",
+    "authorImage": "/iluminando.png"
   },
   {
     "id": 2,
-    "title": "Rotina matinal para melhorar seu humor",
-    "date": "25 Novembro 2020",
+    "title": "Capoeira: Cultura, Arte e Resistência",
+    "date": "2024-11-15",
+    "dateFormatted": "15 Novembro 2024",
     "images": [
-      "https://images.unsplash.com/photo-1544654803-b69140b285a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      "/capoeira.jpg",
+      "/quadrilha.jpg"
     ],
     "videos": [
       "https://www.youtube.com/embed/XYZ123"
     ],
-    "content": "Começar o dia com o pé direito pode impactar significativamente seu humor e produtividade. Inclua 10 minutos de meditação para clarear a mente, seguidos por um café da manhã nutritivo. Exercícios leves, como alongamento, também ajudam a liberar endorfinas, enquanto evitar o celular nas primeiras horas permite focar em você. Adotar uma rotina matinal consistente pode transformar seus dias, e estudos mostram que isso reduz o estresse em até 30% quando seguido regularmente. Ajuste essas sugestões ao seu estilo de vida para melhores resultados.",
-    "author": "Amelia Anderson",
-    "authorRole": "Lead Developer",
-    "authorBio": "Amelia é apaixonada por produtividade e bem-estar, combinando sua experiência em tecnologia com práticas de vida saudável.",
-    "authorImage": "https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80"
+    "content": "A capoeira é muito mais que um esporte – é uma expressão cultural brasileira que combina dança, luta e musicalidade. No Iluminando o Futuro, nossas aulas de capoeira têm o objetivo de resgatar e valorizar essa herança africana e afro-brasileira, enquanto promovem atividade física e bem-estar mental. Crianças e adolescentes aprendem sobre história, ritmo, coordenação motora e, principalmente, respeito e disciplina. A capoeira desenvolve confiança, autoestima e proporciona um espaço seguro de expressão. Cada movimento é uma história, cada roda é uma celebração de nossa cultura. Se você busca uma atividade que uno corpo, mente e espírito, a capoeira é o caminho perfeito!",
+    "author": "Iluminando o Futuro",
+    "authorRole": "Instituição Social",
+    "authorBio": "Preservando tradições culturais e desenvolvendo talentos.",
+    "authorImage": "/iluminando.png"
   },
   {
     "id": 3,
-    "title": "Todos os recursos que você deseja conhecer",
-    "date": "30 Setembro 2020",
+    "title": "Futebol: Mais que um Jogo, uma Oportunidade",
+    "date": "2024-11-10",
+    "dateFormatted": "10 Novembro 2024",
     "images": [
-      "https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1547&q=80",
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      "/futebol.jpg",
+      "/flamengo.webp"
     ],
     "videos": [
       "https://www.youtube.com/embed/ABC789"
     ],
-    "content": "Explore uma lista abrangente de recursos que podem elevar seu trabalho e aprendizado. Ferramentas como Trello para gestão de projetos e Notion para anotações são indispensáveis, enquanto plataformas como Coursera oferecem cursos de alta qualidade. Um bom editor de texto, como VS Code, também é essencial. Integrar esses recursos ao seu dia a dia pode aumentar sua eficiência. Muitas dessas ferramentas oferecem versões gratuitas com funcionalidades robustas, então experimente e escolha as que melhor se adaptam às suas necessidades.",
-    "author": "Amelia Anderson",
-    "authorRole": "Lead Developer",
-    "authorBio": "Amelia tem um histórico em desenvolvimento de software e é reconhecida por suas recomendações de ferramentas inovadoras.",
-    "authorImage": "https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80"
+    "content": "O futebol é uma paixão nacional que vai muito além de chegar uma bola em um gol. Para muitos jovens, é uma porta de entrada para um futuro melhor. No Iluminando o Futuro, usamos o futebol como ferramenta de inclusão social, desenvolvendo habilidades técnicas, trabalho em equipe e cidadania. Nossas categorias acompanham crianças desde os sete anos, criando um ambiente de crescimento constante. Além de aprender as técnicas do jogo, os meninos e meninas aprendem sobre disciplina, respeito ao próximo e importância do estudo. Muitos de nossos atletas já conquistaram bolsas de estudo e oportunidades profissionais. O futebol abre portas, e nós nos comprometemos a abrir as melhores delas para nossas crianças!",
+    "author": "Iluminando o Futuro",
+    "authorRole": "Instituição Social",
+    "authorBio": "Transformando talentos em oportunidades através do esporte.",
+    "authorImage": "/iluminando.png"
+  },
+  {
+    "id": 4,
+    "title": "Festividades que Unem e Celebram",
+    "date": "2024-11-01",
+    "dateFormatted": "01 Novembro 2024",
+    "images": [
+      "/festajunina23.jpg",
+      "/natal.webp"
+    ],
+    "videos": [
+      "https://www.youtube.com/embed/festivalvideo"
+    ],
+    "content": "Nas comunidades que atendemos, as festividades são momentos especiais de união, alegria e celebração. Festa Junina, Natal, Festa de Encerramento – cada evento é uma oportunidade de fortalecer laços familiares e comunitários. Essas celebrações não são apenas diversão, são momentos onde crianças, famílias e voluntários compartilham histórias, criam memórias e se sentem acolhidos. Através das festividades, transmitimos valores culturais, tradições e o sentimento de pertencimento. Aqui, toda criança é estrela, todo talento é reconhecido e toda família é acolhida. Nossas festas são reflexo do amor e dedicação que colocamos em cada projeto. Participe de nossas celebrações e sinta o calor da comunidade!",
+    "author": "Iluminando o Futuro",
+    "authorRole": "Instituição Social",
+    "authorBio": "Celebrando a vida e os sonhos de nossas crianças.",
+    "authorImage": "/iluminando.png"
   }
 ]

@@ -10,6 +10,8 @@ const fadeInUp = {
 };
 
 const BlogList = () => {
+  const sortedPosts = [...blogData].sort((a, b) => new Date(b.date) - new Date(a.date));
+
   return (
     <main className="font-body text-gray-800">
       <section className="bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-300 py-20">
@@ -30,7 +32,7 @@ const BlogList = () => {
       <section className="bg-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-            {blogData.map((post) => (
+            {sortedPosts.map((post) => (
               <motion.article
                 key={post.id}
                 className="rounded-lg overflow-hidden shadow-lg bg-white hover:shadow-xl transition-shadow duration-300"
@@ -50,7 +52,7 @@ const BlogList = () => {
                   <h3 className="text-xl font-title font-semibold text-gray-900 mb-2">
                     {post.title}
                   </h3>
-                  <p className="text-sm text-gray-500 mb-3">{post.date}</p>
+                  <p className="text-sm text-gray-500 mb-3">{post.dateFormatted}</p>
                   <p className="text-gray-700 mb-4 line-clamp-3">
                     {post.content.substring(0, 150)}...
                   </p>
@@ -135,7 +137,7 @@ const BlogPost = () => {
         >
           {post.title}
         </motion.h1>
-        <p className="text-center text-white mt-4 font-body">{post.date}</p>
+        <p className="text-center text-white mt-4 font-body">{post.dateFormatted}</p>
       </section>
 
       <section className="bg-white py-16 px-6">
