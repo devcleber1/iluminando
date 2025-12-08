@@ -20,6 +20,8 @@ import futebol from './Futebol/futebol3.jpg';
 import futebol2 from './Futebol/futebol2.jpg';
 import futebol3 from './Futebol/futebol.jpg';
 import futebol4 from './Futebol/futebol4.jpg';
+import percussao from './Percussão/oficinaper.jpg';
+import percussao2 from './Percussão/oficinaper2.jpg';
 
 const workshops = [
   {
@@ -73,7 +75,7 @@ const workshops = [
   {
     id: 'futebol',
     title: 'Futebol',
-    icon: 'Volleyball', // Considere criar um ícone específico para futebol, se disponível
+    icon: 'Volleyball', 
     images: [futebol, futebol2, futebol3, futebol4],
     description:
       'Nossa ONG utiliza o futebol como ferramenta de inclusão social, desenvolvimento pessoal e formação cidadã. Por meio de treinos e atividades educativas, promovemos a disciplina, o trabalho em equipe e o respeito entre crianças e jovens de comunidades. Além de ensinar técnicas e fundamentos do esporte, também incentivamos valores como comprometimento, liderança e solidariedade. Acreditamos que o futebol vai além do campo, sendo um caminho para construir oportunidades e transformar vidas!',
@@ -81,6 +83,18 @@ const workshops = [
     schedule:
       'Terças e Quartas, Grupo 1: 17:30h às 19h, e Grupo 2: 19h às 20:30',
     studentsInfo: '30+ alunos estudando',
+  },
+  {
+    id: 'percussao',
+    title: 'Percussão',
+    icon: 'Drum',
+    images: [percussao, percussao2],
+    description:
+      'Nossa ONG oferece oficinas de percussão como ferramenta de expressão artística, desenvolvimento musical e inclusão social. Por meio do ritmo, sons e instrumentos percussivos, promovemos a criatividade, a sensibilidade musical e a autoestima de crianças, jovens e adultos. Nossas aulas desenvolvem habilidades rítmicas, coordenação motora e trabalho em equipe, criando um espaço acolhedor onde cada participante pode explorar seu potencial musical. Acreditamos que a música é um universal que une comunidades e transforma vidas!',
+    infoText: `Nossa ONG tem como missão oferecer oficinas de percussão como uma ferramenta poderosa de expressão artística, desenvolvimento musical e inclusão social. Por meio do ritmo, sons e instrumentos percussivos, promovemos a criatividade, a sensibilidade musical e a autoestima de crianças, jovens e adultos de todas as origens. Nossas aulas estruturadas desenvolvem habilidades rítmicas, coordenação motora, disciplina e trabalho em equipe, criando um espaço acolhedor e dinâmico onde cada participante pode explorar seu potencial musical único. Além de ensinar técnicas de percussão, incentivamos a expressão pessoal, a confiança e a conexão comunitária. Acreditamos que a música é uma linguagem universal que une pessoas, celebra a diversidade cultural e transforma vidas, abrindo caminhos para um futuro cheio de ritmo, alegria e possibilidades!`,
+    schedule:
+      'Terças e Quartas, Grupo 1: 17:30h às 19h, e Grupo 2: 19h às 20:30',
+    studentsInfo: '15+ alunos estudando',
   },
 ];
 

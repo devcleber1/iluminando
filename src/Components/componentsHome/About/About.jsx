@@ -73,16 +73,12 @@ const About = () => {
         <div className="flex flex-col items-center gap-10 max-w-5xl mx-auto px-2 md:px-4">
           <div className="flex flex-col md:flex-row bg-gray-100 p-6 rounded-xl shadow-md w-full items-center md:items-start gap-6">
             <div className="relative w-full md:w-1/2 pb-[56.25%]">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full rounded-md"
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/B5FJMsq-YmQ?si=example" // Added si param if needed; ensure privacy-enhanced mode
-                title="Sobre nós - Vídeo de introdução"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+              <img
+                className="absolute top-0 left-0 w-full h-full object-cover rounded-md"
+                src="/iluminandosobre.webp"
+                alt="Iluminando o Futuro - Transformando Vidas"
                 loading="lazy"
+                decoding="async"
               />
             </div>
 

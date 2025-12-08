@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowRight, Book, Calculator, Volleyball, Baby, Award } from 'lucide-react';
+import { ArrowRight, Book, Calculator, Volleyball, Baby, Award, Drum } from 'lucide-react';
 import workshopsData from './workshops';
 
 const iconMap = {
@@ -11,6 +11,7 @@ const iconMap = {
   Volleyball,
   Baby,
   Award,
+  Drum,
 };
 
 const WorkshopCard = memo(({ id, title, icon: Icon, images, description, studentsInfo }) => (
