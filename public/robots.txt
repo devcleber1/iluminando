@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /_next
+Disallow: /.
+Disallow: /node_modules
+Disallow: /src
+
+# Sitemaps
+Sitemap: https://iluminandoofuturo.com.br/sitemap.xml
+
+# Crawl delay (tempo entre requisições)
+Crawl-delay: 1
+
+# User agents específicos
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: AdsBot-Google
+Allow: /
+Crawl-delay: 0
+
+User-agent: msnbot
+Allow: /
+Crawl-delay: 1
+
+# Bloquear bots ruins
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
