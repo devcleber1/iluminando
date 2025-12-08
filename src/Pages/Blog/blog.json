@@ -1,75 +1,91 @@
 [
   {
     "id": 1,
-    "title": "Educação Transformando Vidas",
-    "date": "2024-11-24",
-    "dateFormatted": "24 Novembro 2024",
+    "title": "Campeões da URAQUERJ",
+    "date": "2025-08-24",
+    "dateFormatted": "24 Agosto 2025",
     "images": [
-      "/educacao.jpg",
-      "/educa.jpg"
+      "/uraquerj.jpg",
+      "/uraquerj2.jpg",
+      "/uraquerj3.jpg",
+      "/uraquerj4.jpg"
     ],
     "videos": [
-      "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "https://www.youtube.com/embed/1Z4bE0Q5i1o"
     ],
-    "content": "A educação é a ferramenta mais poderosa para transformar vidas e criar oportunidades. No projeto Iluminando o Futuro, acreditamos que toda criança e jovem merece acesso a uma educação de qualidade que desperte seu potencial. Através de programas estruturados de reforço escolar e alfabetização, temos visto mudanças significativas na vida de centenas de estudantes. Nossas atividades combinam metodologias inovadoras com apoio personalizado, garantindo que cada aluno encontre seu próprio caminho para o sucesso. A educação não é apenas sobre aprender conteúdo, mas sobre formar cidadãos conscientes, críticos e preparados para os desafios do mundo. Venha fazer parte dessa transformação!",
+    "content": "Com imenso orgulho e alegria, celebramos nossos pequenos campeões que conquistaram o título de Campeões de Quadrilha na Categoria Infantil da URAQUERJ! Esta vitória é resultado do dedico, do trabalho em equipe e da paixão por nossa cultura junina. Nossos meninos e meninas demonstraram precisão nos movimentos, sincronização perfeita e uma energia contagiante que impressionou jurados e público. A quadrilha é muito mais que uma dança - é expressão cultural, tradição e alegria que marca o coração de quem assiste. Cada passo, cada salto e cada movimento foi executado com excelência. Essa conquista reflete o compromisso do Iluminando o Futuro em preservar nossas tradições culturais enquanto desenvolvemos talentos extraordinários. Parabéns a todos os nossos pequenos campeões! Vocês são o futuro e a esperança da nossa comunidade. Que este título seja apenas o início de muitas vitórias que virão!",
     "author": "Iluminando o Futuro",
     "authorRole": "Instituição Social",
     "authorBio": "Dedicada a transformar vidas através da educação, cultura e esporte.",
     "authorImage": "/iluminando.png"
   },
   {
-    "id": 2,
-    "title": "Capoeira: Cultura, Arte e Resistência",
-    "date": "2024-11-15",
-    "dateFormatted": "15 Novembro 2024",
-    "images": [
-      "/capoeira.jpg",
-      "/quadrilha.jpg"
-    ],
-    "videos": [
-      "https://www.youtube.com/embed/XYZ123"
-    ],
-    "content": "A capoeira é muito mais que um esporte – é uma expressão cultural brasileira que combina dança, luta e musicalidade. No Iluminando o Futuro, nossas aulas de capoeira têm o objetivo de resgatar e valorizar essa herança africana e afro-brasileira, enquanto promovem atividade física e bem-estar mental. Crianças e adolescentes aprendem sobre história, ritmo, coordenação motora e, principalmente, respeito e disciplina. A capoeira desenvolve confiança, autoestima e proporciona um espaço seguro de expressão. Cada movimento é uma história, cada roda é uma celebração de nossa cultura. Se você busca uma atividade que uno corpo, mente e espírito, a capoeira é o caminho perfeito!",
-    "author": "Iluminando o Futuro",
-    "authorRole": "Instituição Social",
-    "authorBio": "Preservando tradições culturais e desenvolvendo talentos.",
-    "authorImage": "/iluminando.png"
-  },
+  "id": 2,
+  "title": "Quadrilha Iluminando o Futuro: Reconhecidos como Revelação do Rio de Janeiro 2025!",
+  "date": "2025-09-28",
+  "dateFormatted": "28 Setembro 2025",
+  "images": [
+    "/uniao3.jpg",
+    "/uniao.jpg",
+    "/uniao2.jpg",
+    "/uniao4.jpg"
+  ],
+  "content": "Hoje é um dia que ficará marcado em nossa história! Com muita alegria e gratidão, compartilhamos uma conquista que enche nossos corações de orgulho: recebemos o Certificado de Reconhecimento e fomos indicados como Quadrilha Revelação Rio de Janeiro 2025, concedidos pela União Junina RJ!\n\nEste momento é especialmente significativo para toda a nossa trupe. Mais do que um título, essa indicação simboliza a dedicação, o suor e a paixão de cada integrante que compõe a Quadrilha Iluminando o Futuro. É o reflexo do trabalho coletivo, da união da nossa comunidade e do apoio incondicional das famílias, amigos e todos que acreditam e vibram com o nosso sonho.\n\nSer reconhecidos como Revelação é a confirmação de que cada ensaio, cada coreografia, cada sorriso e energia dispensada nas apresentações valeram a pena. É a certeza de que estamos no caminho certo, levando alegria, tradição e a riqueza da cultura junina para todos os cantos por onde passamos.\n\nQueremos agradecer imensamente à União Junina RJ por acreditar no nosso trabalho e por dar visibilidade ao esforço de tantas quadrilhas que, como nós, respiram e mantêm viva a chama do São João. Esse reconhecimento nos inspira a seguir adiante com ainda mais força e compromisso.\n\nE seguimos firmes! Com o coração aquecido e os pés no ritmo do forró, continuaremos a escrever, juntos, uma linda história no cenário junino do Rio de Janeiro. O futuro está só começando – e vamos iluminá-lo, passo a passo, dança a dança.",
+  "author": "Iluminando o Futuro",
+  "authorRole": "Instituição Social",
+  "authorBio": "Preservando tradições culturais e desenvolvendo talentos.",
+  "authorImage": "/iluminando.png"
+},
   {
     "id": 3,
-    "title": "Futebol: Mais que um Jogo, uma Oportunidade",
+    "title": "Solidariedade e Compaixão - Campanhas de Doação do Cristo Sustentável",
     "date": "2024-11-10",
     "dateFormatted": "10 Novembro 2024",
     "images": [
-      "/futebol.jpg",
-      "/flamengo.webp"
+      "/doacaocris2.jpg",
+      "/doacaocris.jpg",
+      "/doacaocris3.jpg",
+      "/doacaocris4.jpg",
+      "/doacaocris5.jpg"
     ],
-    "videos": [
-      "https://www.youtube.com/embed/ABC789"
-    ],
-    "content": "O futebol é uma paixão nacional que vai muito além de chegar uma bola em um gol. Para muitos jovens, é uma porta de entrada para um futuro melhor. No Iluminando o Futuro, usamos o futebol como ferramenta de inclusão social, desenvolvendo habilidades técnicas, trabalho em equipe e cidadania. Nossas categorias acompanham crianças desde os sete anos, criando um ambiente de crescimento constante. Além de aprender as técnicas do jogo, os meninos e meninas aprendem sobre disciplina, respeito ao próximo e importância do estudo. Muitos de nossos atletas já conquistaram bolsas de estudo e oportunidades profissionais. O futebol abre portas, e nós nos comprometemos a abrir as melhores delas para nossas crianças!",
+    "content": "A solidariedade e a compaixão são pilares fundamentais do projeto Iluminando o Futuro. Nossas campanhas de doação do Cristo Sustentável refletem o compromisso em ajudar quem mais precisa, levando esperança e suporte a famílias em situação de vulnerabilidade. Cada doação, por menor que seja, faz uma diferença significativa na vida daqueles que atendemos. Através dessas campanhas, ensinamos nossas crianças e adolescentes sobre a importância do compartilhamento, da empatia e do amor ao próximo. Acreditamos que juntos podemos construir uma sociedade mais justa e compassiva. Se você deseja fazer parte dessa missão nobre, junte-se a nós. Sua doação pode iluminar muitos futuros!",
     "author": "Iluminando o Futuro",
     "authorRole": "Instituição Social",
-    "authorBio": "Transformando talentos em oportunidades através do esporte.",
+    "authorBio": "Transformando vidas através da solidariedade e compaixão.",
     "authorImage": "/iluminando.png"
   },
   {
     "id": 4,
-    "title": "Festividades que Unem e Celebram",
-    "date": "2024-11-01",
-    "dateFormatted": "01 Novembro 2024",
+    "title": "Momento Doce: A Alegria de Uma Entrega Especial",
+    "date": "2025-04-18",
+    "dateFormatted": "18 Abril 2025",
     "images": [
-      "/festajunina23.jpg",
-      "/natal.webp"
+      "/doacaopas3.jpg",
+      "/doacaopas2.jpg",
+      "/doacaopas.jpg",
+      "/doacaopas4.jpg",
+      "/doacaopas5.jpg"
     ],
-    "videos": [
-      "https://www.youtube.com/embed/festivalvideo"
-    ],
-    "content": "Nas comunidades que atendemos, as festividades são momentos especiais de união, alegria e celebração. Festa Junina, Natal, Festa de Encerramento – cada evento é uma oportunidade de fortalecer laços familiares e comunitários. Essas celebrações não são apenas diversão, são momentos onde crianças, famílias e voluntários compartilham histórias, criam memórias e se sentem acolhidos. Através das festividades, transmitimos valores culturais, tradições e o sentimento de pertencimento. Aqui, toda criança é estrela, todo talento é reconhecido e toda família é acolhida. Nossas festas são reflexo do amor e dedicação que colocamos em cada projeto. Participe de nossas celebrações e sinta o calor da comunidade!",
+    "content": "O que começou com uma simples entrega se transformou em algo muito maior: momentos de alegria, afeto e conexão. Cada sorriso que recebemos em troca valeu mais do que mil palavras. Foi lindo ver as crianças tão felizes, com os olhinhos brilhando e os corações cheios de carinho. Que a doçura desse gesto se espalhe e inspire mais pessoas a fazerem o bem. Porque quando a gente compartilha amor, ele volta em forma de luz!",
     "author": "Iluminando o Futuro",
     "authorRole": "Instituição Social",
-    "authorBio": "Celebrando a vida e os sonhos de nossas crianças.",
+    "authorBio": "Levando esperança e alegria através das campanhas de doação.",
+    "authorImage": "/iluminando.png"
+  },
+  {
+    "id": 5,
+    "title": "Premiação UNISUAM: O reconhecimento de um impacto real na comunidade",
+    "date": "2025-11-27",
+    "dateFormatted": "27 Novembro 2025",
+    "images": [
+      "/certificadouni.jpg",
+      "/certificadouni2.jpg",
+      "/certificadouni3.jpg",
+      "/certificadouni4.jpg"
+    ],
+    "content": "Ontem vivemos um momento muito importante para a história do nosso projeto. Estar na premiação da UNISUAM e receber esse reconhecimento é a prova de que tudo o que construímos — cada oficina, cada encontro, cada criança e adolescente que acredita em nós — está gerando impacto real na comunidade.\n\nEssa conquista representa muito mais do que um certificado ou um nome anunciado. Ela representa o nosso crescimento, a nossa luta diária, a nossa coragem de continuar mesmo não tendo recursos, mesmo quando o caminho parece longo demais e sem luz no fim. Representa a força da cultura, da educação e da arte como ferramentas de transformação social.\n\nSer premiado por uma instituição como a UNISUAM, que valoriza ações extensionistas, desenvolvimento comunitário e impacto social, mostra que nosso trabalho não passa despercebido. Mostra que o que fazemos chega, toca, transforma e inspira. Mostra que estamos construindo algo sólido, responsável e poderoso dentro da nossa comunidade.\n\nEssas imagens carregam: emoção, dedicação da nossa equipe, o brilho nos olhos das nossas crianças e adolescentes, e a certeza de que estamos avançando com propósito.\n\nHoje não celebramos apenas a premiação — celebramos a nossa evolução.\n\nAgradecemos à UNISUAM, ao Serviço Social da UNISUAM e à Extensão Universitária da UNISUAM por reconhecerem o valor da nossa missão. Por entenderem que projetos como o nosso fortalecem territórios, ampliam sonhos e abrem caminhos para um futuro mais justo e mais iluminado.\n\nEssa vitória não é apenas do projeto. É da comunidade. É das famílias. É de cada criança que já passou por nós. É de cada jovem que encontrou aqui um espaço de acolhimento, expressão e crescimento.\n\nE se hoje fomos premiados, amanhã seguiremos ainda mais fortes — porque a nossa missão não para. Seguimos transformando, inspirando e iluminando o futuro, passo a passo, conquista por conquista.",
+    "author": "Iluminando o Futuro",
+    "authorRole": "Instituição Social",
+    "authorBio": "Formando profissionais competentes e confiantes para o mercado.",
     "authorImage": "/iluminando.png"
   }
 ]

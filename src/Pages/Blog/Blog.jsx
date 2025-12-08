@@ -143,14 +143,18 @@ const BlogPost = () => {
       <section className="bg-white py-16 px-6">
         <div className="max-w-4xl mx-auto">
           {/* Featured Image */}
-          <motion.img
-            src={post.images[0]}
-            alt={post.title}
-            className="w-full h-96 object-cover rounded-lg shadow-lg mb-8"
+          <motion.div
+            className="bg-gray-100 rounded-lg shadow-lg mb-8 p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-          />
+          >
+            <img
+              src={post.images[0]}
+              alt={post.title}
+              className="w-full h-auto object-contain rounded"
+            />
+          </motion.div>
 
           {/* Main Content */}
           <motion.div
@@ -177,12 +181,16 @@ const BlogPost = () => {
               </h3>
               <div className="grid gap-6 md:grid-cols-2">
                 {post.images.slice(1).map((image, index) => (
-                  <img
+                  <div
                     key={index}
-                    src={image}
-                    alt={`Imagem ${index + 2}`}
-                    className="w-full h-64 object-cover rounded-lg shadow-md"
-                  />
+                    className="bg-gray-100 rounded-lg shadow-md p-4"
+                  >
+                    <img
+                      src={image}
+                      alt={`Imagem ${index + 2}`}
+                      className="w-full h-auto object-contain rounded"
+                    />
+                  </div>
                 ))}
               </div>
             </motion.div>
