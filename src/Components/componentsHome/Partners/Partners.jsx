@@ -8,7 +8,6 @@ import Uni from '../../../assets/unissuam.png';
 import Cristo from '../../../assets/cristo.png';
 import Bestacai from '../../../assets/bestacai.png';
 import Vero from '../../../assets/vero.png';
-import Rs from '../../../assets/rs.png';
 
 const partners = [
   { src: Flamengo, alt: 'Flamengo' },
@@ -18,7 +17,6 @@ const partners = [
   { src: Cristo, alt: 'Cristo Redentor' },
   { src: Bestacai, alt: 'Bestacai' },
   { src: Vero, alt: 'Vero' },
-  { src: Rs, alt: 'RS' },
 ];
 
 // Animação elegante com escala, opacidade e subida
